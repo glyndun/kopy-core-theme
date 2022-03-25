@@ -1,0 +1,2228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>New Order &mdash; Admin</title>
+    <!--begin::Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <!--end::Fonts-->
+    <!-- General CSS Files -->
+    <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="/node_modules/select2/dist/css/select2.min.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Page Specific Css File -->
+</head>
+
+<body class="menu-active position-ralative">
+    <div class="pre-loader">
+        <div class="pre-loader-container">
+            <div class="pre-loader-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <aside class="side-nav" id="sidebar">
+            <div class="flex-column-fluid">
+                <div class="sidebar-scroll hover-scroll-overlay-y" id="sidebar-menu" data-sidebar-menu="true"
+                    data-scroll-dependencies="{default: '#sidebar_footer', lg: '#header, #sidebar_footer'}"
+                    style="height: 285px;">
+                    <div class="sidebar-toolbar">
+                        <div class="sidebar-search-header"></div>
+                        <div class="sidebar-search-container">
+                            <button class="btn search-btn" data-bs-toggle="modal" data-bs-target="#quickSearchModal">
+                                <svg width="24" height="24" fill="none" aria-hidden="true" class="me-2 flex-none">
+                                    <path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </circle>
+                                </svg>
+                                Quick search...
+                            </button>
+                        </div>
+                        <div class="sidebar-search-footer"></div>
+                    </div>
+
+                    <nav class="drawer accordion" id="drawerAccordion">
+                        <div class="drawer-menu">
+                            <div class="nav" id="navbar-menu">
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseDashboards" aria-expanded="false"
+                                    aria-controls="collapseDashboards">
+                                    <svg class="nav-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                                    </svg>
+                                    Dashboard
+                                </a>
+                                <div id="collapseDashboards" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#drawerAccordion">
+                                    <div class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/index.html">Dashboard 1</a>
+                                        <a class="nav-link" href="/pages/dashboard-2.html">Dashboard 2</a>
+                                        <a class="nav-link" href="/pages/dashboard-3.html">Dashboard 3</a>
+                                        <a class="nav-link" href="/pages/dashboard-4.html">Dashboard 4</a>
+                                    </div>
+                                </div>
+                                <div class="drawer-menu-heading mt-3">Pages</div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseAuthPages" aria-expanded="false"
+                                    aria-controls="collapseAuthPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                                    </svg>
+                                    Authentication
+                                </a>
+                                <div id="collapseAuthPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseAuthPages" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/auth/login.html">Sign in</a>
+                                        <a class="nav-link" href="/pages/auth/register.html">Sign up</a>
+                                        <a class="nav-link" href="/pages/auth/reset-password.html">Reset Password</a>
+                                        <a class="nav-link" href="/pages/auth/email-verification.html">Email
+                                            Verification</a>
+                                    </nav>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseAccountPages"
+                                    aria-expanded="false" aria-controls="collapseAccountPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-user">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    Account
+                                </a>
+                                <div id="collapseAccountPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseAccountPages" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/account/overview.html">Overview</a>
+                                        <a class="nav-link" href="/pages/account/followers.html">Followers</a>
+                                        <a class="nav-link" href="/pages/account/activity.html">Activity</a>
+                                        <a class="nav-link" href="/pages/account/logs.html">Logs</a>
+                                    </nav>
+                                </div>
+                                <a href="/pages/feeds.html" class="nav-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                                    </svg>
+                                    Feeds
+                                </a>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseBlogPages" aria-expanded="false"
+                                    aria-controls="collapseBlogPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                                    </svg>
+                                    Blogs
+                                </a>
+                                <div id="collapseBlogPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseBlogPages" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/blogs/listing.html">All blogs</a>
+                                        <a class="nav-link" href="/pages/blogs/show.html">Blog details</a>
+                                    </nav>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseErrorPages" aria-expanded="false"
+                                    aria-controls="collapseErrorPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    Error pages
+                                </a>
+                                <div id="collapseErrorPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseErrorPages" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/errors/404.html" target="_blank">404 page</a>
+                                        <a class="nav-link" href="/pages/errors/500.html" target="_blank">500 page</a>
+                                        <a class="nav-link" href="/pages/errors/under_maintenance.html"
+                                            target="_blank">Under maintenance</a>
+                                    </nav>
+                                </div>
+                                <a href="/pages/pricing.html" class="nav-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    Pricing
+                                </a>
+                                <div class="drawer-menu-heading mt-3">Apps</div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseUserManagementPages"
+                                    aria-expanded="false" aria-controls="collapseUserManagementPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-users">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    User management
+                                </a>
+                                <div id="collapseUserManagementPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseUserManagementPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="eUserManagementDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/user/overview.html">Overview</a>
+                                            <a class="nav-link" href="/pages/user/no_users.html">No users</a>
+                                            <a class="nav-link" href="/pages/user/roles.html">Roles</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseSubscriptionPages"
+                                    aria-expanded="false" aria-controls="collapseSubscriptionPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                    Subscriptions
+                                </a>
+                                <div id="collapseSubscriptionPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseSubscriptionPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="eUserManagementDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/subscription/listing.html">All
+                                                subscriptions</a>
+                                            <a class="nav-link" href="/pages/subscription/details.html">Subscription
+                                                details</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseProjectsPages"
+                                    aria-expanded="false" aria-controls="collapseProjectsPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                    </svg>
+                                    Projects
+                                </a>
+                                <div id="collapseProjectsPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseProjectsPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="projectsDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/projects/list.html">All projects</a>
+                                            <a class="nav-link" href="/pages/projects/tasks.html">Tasks</a>
+                                            <a class="nav-link" href="/pages/projects/activity.html">Activity</a>
+                                            <a class="nav-link" href="/pages/projects/files.html">Files</a>
+                                            <a class="nav-link" href="/pages/projects/members.html">Members</a>
+                                            <a class="nav-link" href="/pages/projects/no_projects.html">No projects</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseCommercePages"
+                                    aria-expanded="false" aria-controls="collapseCommercePages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                    eCommerce
+                                </a>
+                                <div id="collapseCommercePages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseCommercePages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="eCommerceDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link accordion-button collapsed" href="#" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseCommerceProductPages"
+                                                aria-expanded="false"
+                                                aria-controls="collapseCommerceProductPages">Products</a>
+                                            <div id="collapseCommerceProductPages" class="accordion-collapse collapse"
+                                                aria-labelledby="collapseCommerceProductPages"
+                                                data-bs-parent="#eCommerceDrawerAccordion">
+                                                <nav class="drawer-menu-nested nav">
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/product/list.html">Product
+                                                        list</a>
+                                                    <a class="nav-link" href="/pages/ecommerce/product/create.html">Add
+                                                        Product</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/product/catalog.html">Catalog</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/product/overview.html">Overview</a>
+                                                    <a class="nav-link" href="/pages/ecommerce/product/edit.html">Edit
+                                                        Product</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link" href="/pages/ecommerce/order/list.html">Orders</a>
+                                            <a class="nav-link accordion-button collapsed" href="#" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseCommerceCustomerPages" aria-expanded="false"
+                                                aria-controls="collapseCommerceCustomerPages">Customers</a>
+                                            <div id="collapseCommerceCustomerPages" class="accordion-collapse collapse"
+                                                aria-labelledby="collapseCommerceCustomerPages"
+                                                data-bs-parent="#eCommerceDrawerAccordion">
+                                                <nav class="drawer-menu-nested nav">
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/customer/listing.html">Listing</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/customer/show.html">Customer
+                                                        details</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link" href="/pages/ecommerce/checkout.html">Checkout</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseInboxesPages"
+                                    aria-expanded="false" aria-controls="collapseInboxesPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                                    </svg>
+                                    Email
+                                </a>
+                                <div id="collapseInboxesPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseInboxesPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/email/inbox.html">Inbox</a>
+                                            <a class="nav-link" href="/pages/email/messages.html">Messages</a>
+                                            <a class="nav-link" href="/pages/email/show.html">Show</a>
+                                            <a class="nav-link" href="/pages/email/compose.html">Compose</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFilesPages" aria-expanded="false"
+                                    aria-controls="collapseFilesPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z" />
+                                    </svg>
+                                    File manager
+                                </a>
+                                <div id="collapseFilesPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseFilesPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/file_management/list.html">File lists</a>
+                                            <a class="nav-link" href="/pages/file_management/no_files.html">No files</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseInvoicesPages"
+                                    aria-expanded="false" aria-controls="collapseInvoicesPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg>
+                                    Invoice manager
+                                </a>
+                                <div id="collapseInvoicesPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseInvoicesPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/invoice_management/list.html">Invoices</a>
+                                            <a class="nav-link"
+                                                href="/pages/invoice_management/invoice.html">Details</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="/pages/contacts/list.html" class="nav-link" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="currentColor"
+                                        viewBox="0 0 448 512">
+                                        <path
+                                            d="M436 160c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20zm-68 304H48V48h320v416zM208 256c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6-10.8 0-18.7 8-44.8 8-26.9 0-33.4-8-44.8-8-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z">
+                                        </path>
+                                    </svg>
+                                    Contacts
+                                </a>
+                                <a href="/pages/calendar.html" class="nav-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    Calendar
+                                </a>
+                                <div class="drawer-menu-heading mt-3">UI Toolkit</div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseComponents" aria-expanded="false"
+                                    aria-controls="collapseComponents">
+                                    <svg class="nav-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                    </svg>
+                                    Components
+                                </a>
+                                <div id="collapseComponents" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseComponents" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/components/actions.html">Actions</a>
+                                        <a class="nav-link" href="/pages/components/form.html">Form</a>
+                                        <a class="nav-link" href="/pages/components/tables.html">Tables</a>
+                                        <a class="nav-link" href="/pages/components/datatables.html">Datatables</a>
+                                    </nav>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseIconPages" aria-expanded="false"
+                                    aria-controls="collapseIconPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                    </svg>
+                                    Icons
+                                </a>
+                                <div id="collapseIconPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseIconPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="iconsDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link accordion-button collapsed" href="#" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseIconFontawesomePages"
+                                                aria-expanded="false" aria-controls="collapseIconFontawesomePages">Font
+                                                Awesome
+                                                5</a>
+                                            <div id="collapseIconFontawesomePages" class="accordion-collapse collapse"
+                                                aria-labelledby="collapseIconFontawesomePages"
+                                                data-bs-parent="#iconsDrawerAccordion">
+                                                <nav class="drawer-menu-nested nav">
+                                                    <a class="nav-link"
+                                                        href="/pages/icons/fontawesome-regular.html">Regular</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/icons/fontawesome-solid.html">Solid</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/icons/fontawesome-brand.html">Brands</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link" href="/pages/icons/feather.html">Feather</a>
+                                            <a class="nav-link" href="/pages/icons/octicon.html">Octicons</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drawer-footer"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <!--begin::Footer-->
+            <div class="sidebar-footer flex-column-auto" id="sidebar_footer">
+                <div class="sidebar-title mb-2 px-4">Profile</div>
+                <div class="d-flex px-4">
+                    <img class="user-image me-3" src="/img/avatar/user-1.jpg" alt="Profile">
+                    <div class="flex-row-fluid flex-wrap flex-grow-1">
+                        <div class="d-flex flex-column justify-content-center">
+                            <h3 class="text-white text-decoration-none fs-11 mb-0 fw-normal">John Doe</h3>
+                            <span class="text-muted fs-12">Manager</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button type="button"
+                            class="dropdown-toggle dropdown-no-caret dropdown-toggle-split btn bt-sm px-1 py-1 text-muted text-muted-hover"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu w-60r">
+                            <li>
+                                <div class="d-flex px-3 py-1">
+                                    <img class="user-image me-2" src="/img/avatar/user-1.jpg" alt="Profile">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <h3 class="text-dark text-decoration-none fs-10 mb-0 fw-bold line-clamp-1">John
+                                            Doe</h3>
+                                        <span class="text-muted fs-12 line-clamp-1">Manager</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/user/profile_settings.html">My
+                                    Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/subscription/details.html">Subscriptions</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/projects/activity.html">Projects</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/auth/login.html">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end::Footer-->
+        </aside>
+        <div class="content-wrapper">
+            <header class="navbar-head" id="header">
+                <div class="navbar-brand">
+                    <div class="navbar-brand-mini">
+                        <a href="/pages/index.html" class="d-flex align-items-center text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-danger me-2" width="26" height="26"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z" />
+                                <path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z" />
+                            </svg>
+                            <h4 class="text-white mb-0 fs-9">Kopy</h4>
+                        </a>
+                    </div>
+                    <div class="navbar-brand-lg">
+                        <a href="/pages/index.html" class="d-flex align-items-center text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-danger me-2" width="26" height="26"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z" />
+                                <path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z" />
+                            </svg>
+                            <h4 class="text-white mb-0">Kopy</h4>
+                        </a>
+                    </div>
+
+
+                    <button type="button" class="toggle-menu" data-toggle-menu="lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="minimize-opt minimize-active" width="22"
+                            height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            class="minimize-opt minimize-hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+
+                    <button type="button" class="btn px-1 toggle-menu-mobile ms-auto" data-toggle-menu="mini">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="navbar-toolbar">
+                    <div class="container-fluid d-flex flex-md-row flex-column justify-md-content-between py-3 py-lg-0">
+                        <div class="d-flex justify-content-center flex-column flex-grow-1">
+                            <h1 class="d-flex flex-column fw-bold fs-9 mb-0 line-clamp-1">
+                                New Order
+                            </h1>
+                            <ul class="breadcrumb fw-normal overflow-hidden">
+                                <li class="breadcrumb-item">
+                                    <a href="/pages/index.html" class="text-decoration-none">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="/pages/ecommerce/order/list.html" class="text-decoration-none">Orders</a>
+                                </li>
+                                <li class="breadcrumb-item active">New Order</li>
+                            </ul>
+                        </div>
+
+                        <ul
+                            class="nav navbar-top-links navbar-right align-items-center mt-2 mt-md-0 justify-content-around justify-md-content-start">
+                            <li>
+                                <button class="btn navbar-btn" data-bs-toggle="modal"
+                                    data-bs-target="#quickSearchModal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="navbar-item-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn navbar-btn btn-toggle-screen">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="navbar-item-icon maximize-icon"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize">
+                                        <path
+                                            d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+                                        </path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="navbar-item-icon manimize-icon"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize">
+                                        <path
+                                            d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <button type="button" class="dropdown-toggle dropdown-no-caret navbar-btn"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg class="navbar-item-icon" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                                        </svg>
+                                        <span
+                                            class="position-absolute top-20 start-80 translate-middle p-1 bg-danger border border-2 border-white rounded-circle">
+                                            <span class="visually-hidden">New alerts</span>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-start w-96r dropdown-menu-lg-end"
+                                        id="messages">
+                                        <li>
+                                            <div
+                                                class="dropdown-header d-flex align-items-center justify-content-between pt-2 px-4 pb-2">
+                                                <h3 class="fs-8 text-dark mb-0">Messages</h3>
+                                                <a href="#" class="text-dark fs-11 fw-bold text-decoration-none">Mark
+                                                    all as
+                                                    read</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 position-relative w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-2.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                    <span
+                                                        class="position-absolute top-90 start-80 translate-middle p-1 bg-success border border-2 border-white rounded-circle">
+                                                        <span class="visually-hidden">New alerts</span>
+                                                    </span>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">James
+                                                            Stone
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">1 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 position-relative w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-3.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                    <span
+                                                        class="position-absolute top-90 start-80 translate-middle p-1 bg-success border border-2 border-white rounded-circle">
+                                                        <span class="visually-hidden">New alerts</span>
+                                                    </span>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">Sara
+                                                            Jane
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">3 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Consectetur, blanditiis!
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-5.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">Chris
+                                                            James
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">5 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi?
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-4.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">Justine
+                                                            Kim
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">10 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        Possimus,
+                                                        atque. Laborum.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item text-center py-3 fw-bold">View all
+                                                messages</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <button type="button" class="dropdown-toggle dropdown-no-caret navbar-btn"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg class="navbar-item-icon" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                                        </svg>
+                                        <span
+                                            class="position-absolute top-6 -right-2 translate-middle p-1 bg-amber-500 border-2 border-solid border-white rounded-circle animate-pulse">
+                                            <span class="visually-hidden">New alerts</span>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end w-96r">
+                                        <li>
+                                            <div
+                                                class="dropdown-header d-flex align-items-center justify-content-between pt-2 px-4 pb-2">
+                                                <h3 class="fs-8 text-dark mb-0">Notifications</h3>
+                                                <a href="#" class="text-dark fs-11 fw-bold text-decoration-none">Mark
+                                                    all as
+                                                    read</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 position-relative w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-2.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">James
+                                                            Stone
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">1 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Update template for Bugs header.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 position-relative w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-3.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                    <span
+                                                        class="position-absolute top-7 -right-2 translate-middle p-1 bg-emerald-500 border-2 border-solid border-white rounded-circle">
+                                                        <span class="visually-hidden">New alerts</span>
+                                                    </span>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">Sara
+                                                            Jane
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">3 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Marked the <span class="text-amber-500">Bugs Checker</span> as
+                                                        done.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 position-relative w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-5.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">Chris
+                                                            James
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">5 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 mb-0">
+                                                        Assigned John Doe as
+                                                        developer for the project
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 position-relative w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-4.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">Justine
+                                                            Kim
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">10 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Ask to call you.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item text-center py-3 fw-bold">View all
+                                                notifications</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <div class="container-xxl mt-5">
+                    <div class="grid gap-5">
+                        <div class="g-col-12 g-col-lg-8">
+                            <div class="card mb-4">
+                                <div class="card-header pb-0 border-0">
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="fs-8 mb-0">Products</h3>
+                                        <button type="button" class="btn btn-sm btn-light-primary"
+                                            data-bs-toggle="modal" data-bs-target="#browseProducts">Browse
+                                            products</button>
+                                    </div>
+                                </div>
+                                <div class="card-body px-0 pb-0 pt-2">
+                                    <table class="table mb-0" id="order-items">
+                                        <thead>
+                                            <tr>
+                                                <th class="ps-5">Product</th>
+                                                <th class="pe-0">&nbsp;</th>
+                                                <th>Quantity</th>
+                                                <th class="text-end pe-5">Total</th>
+                                                <th class="text-end pe-5">&nbsp;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                    <div class="billing-info border-top-dashed px-4 py-4">
+                                        <h3 class="fs-9 mb-0">Billing</h3>
+                                        <ul class="list-unstyled m-0 p-0 mt-3 lh-lg">
+                                            <li class="d-flex justify-content-between">
+                                                <span>Subtotal</span>
+                                                <span class="subtotal">$90.00</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between">
+                                                <a href="#" class="text-decoration-none text-primary"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#addOrderDiscount">Discount</a>
+                                                <span class="discount">$90.00</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between">
+                                                <a href="#" class="text-decoration-none text-primary"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#addOrderShippingCost">Shipping cost</a>
+                                                <span class="shipping_cost">$90.00</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between">
+                                                <a href="#" class="text-decoration-none text-primary">Tax</a>
+                                                <span class="tax">$90.00</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between border-top-dashed pt-2 mt-2">
+                                                <span class="fw-bold">Total</span>
+                                                <span class="total fw-bold">$90.00</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g-col-12 g-col-lg-4">
+                            <div class="card mb-4">
+                                <div class="card-header pb-0 pt-3 pe-3 border-0">
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="fs-8 mb-0">Customer</h3>
+                                        <div class="d-flex customer-toolbar d-none">
+                                            <a href="#"
+                                                class="text-decoration-none btn btn-sm btn-link px-3 fw-bold me-1"
+                                                data-bs-toggle="modal" data-bs-target="#editCustomer">Edit</a>
+                                            <button type="button" class="btn btn-sm btn-link px-2 text-muted"
+                                                id="remove_customer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-x">
+                                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body pt-3" id="customer_select">
+                                    <div class="d-flex">
+                                        <select name="customer" id="customer" class="form-control select2">
+                                            <option value="">Select customer</option>
+                                            <option value="1" data-id="1"
+                                                data-customer="{&quot;id&quot;:1,&quot;name&quot;:&quot;Ivy Ferry&quot;,&quot;email&quot;:&quot;stokes.ryann@erdman.info&quot;,&quot;status&quot;:&quot;disabled&quot;,&quot;phone&quot;:&quot;+1-508-546-5483&quot;,&quot;ip&quot;:&quot;43.202.18.133&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;17698 Langworth Curve&quot;,&quot;address2&quot;:&quot;5864 Richie Greens Suite 023\nNorth Dellashire, NY 10741&quot;,&quot;city&quot;:&quot;Walterside&quot;,&quot;country&quot;:&quot;Paraguay&quot;,&quot;post_code&quot;:&quot;50868&quot;}}">
+                                                Ivy Ferry</option>
+                                            <option value="2" data-id="2"
+                                                data-customer="{&quot;id&quot;:2,&quot;name&quot;:&quot;Trenton Balistreri&quot;,&quot;email&quot;:&quot;krystal63@gmail.com&quot;,&quot;status&quot;:&quot;disabled&quot;,&quot;phone&quot;:&quot;+17024146048&quot;,&quot;ip&quot;:&quot;104.228.94.249&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;31573 Hahn Row Suite 796&quot;,&quot;address2&quot;:&quot;84740 Schulist Mews\nBessieland, MI 95150&quot;,&quot;city&quot;:&quot;South Einomouth&quot;,&quot;country&quot;:&quot;Kuwait&quot;,&quot;post_code&quot;:&quot;92278&quot;}}">
+                                                Trenton Balistreri</option>
+                                            <option value="3" data-id="3"
+                                                data-customer="{&quot;id&quot;:3,&quot;name&quot;:&quot;Paxton Connelly&quot;,&quot;email&quot;:&quot;shyanne.dach@gmail.com&quot;,&quot;status&quot;:&quot;disabled&quot;,&quot;phone&quot;:&quot;443-842-4800&quot;,&quot;ip&quot;:&quot;97.180.46.159&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;26502 Hodkiewicz Trafficway Apt. 352&quot;,&quot;address2&quot;:&quot;21910 Greenfelder Estates\nWest Deshawn, NV 98874&quot;,&quot;city&quot;:&quot;Hagenesview&quot;,&quot;country&quot;:&quot;Guinea-Bissau&quot;,&quot;post_code&quot;:&quot;95774&quot;}}">
+                                                Paxton Connelly</option>
+                                            <option value="4" data-id="4"
+                                                data-customer="{&quot;id&quot;:4,&quot;name&quot;:&quot;Rebeca Streich&quot;,&quot;email&quot;:&quot;erdman.albina@gmail.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;(904) 681-3134&quot;,&quot;ip&quot;:&quot;121.187.245.143&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;2098 Jammie Point&quot;,&quot;address2&quot;:&quot;49388 Arvilla Run Suite 389\nZulaufburgh, OR 25681-3525&quot;,&quot;city&quot;:&quot;Lake Lura&quot;,&quot;country&quot;:&quot;Norway&quot;,&quot;post_code&quot;:&quot;74529&quot;}}">
+                                                Rebeca Streich</option>
+                                            <option value="5" data-id="5"
+                                                data-customer="{&quot;id&quot;:5,&quot;name&quot;:&quot;Curtis Spencer III&quot;,&quot;email&quot;:&quot;trystan36@yahoo.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;+1-904-557-5328&quot;,&quot;ip&quot;:&quot;27.59.156.212&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;19114 Conroy Parks&quot;,&quot;address2&quot;:&quot;69448 Antoinette Parks Apt. 088\nCristport, CA 68235-7782&quot;,&quot;city&quot;:&quot;Theoborough&quot;,&quot;country&quot;:&quot;Djibouti&quot;,&quot;post_code&quot;:&quot;11969&quot;}}">
+                                                Curtis Spencer III</option>
+                                            <option value="6" data-id="6"
+                                                data-customer="{&quot;id&quot;:6,&quot;name&quot;:&quot;Anita Denesik&quot;,&quot;email&quot;:&quot;verlie.morar@feest.biz&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;1-414-557-1885&quot;,&quot;ip&quot;:&quot;171.183.72.212&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;593 Baumbach River Apt. 878&quot;,&quot;address2&quot;:&quot;958 Katharina Groves\nNedville, UT 60396&quot;,&quot;city&quot;:&quot;Buckridgeburgh&quot;,&quot;country&quot;:&quot;Aruba&quot;,&quot;post_code&quot;:&quot;08086&quot;}}">
+                                                Anita Denesik</option>
+                                            <option value="7" data-id="7"
+                                                data-customer="{&quot;id&quot;:7,&quot;name&quot;:&quot;Rigoberto Feest&quot;,&quot;email&quot;:&quot;robyn96@howe.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;+1-850-326-3148&quot;,&quot;ip&quot;:&quot;142.187.88.180&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;59683 Lura Haven Suite 933&quot;,&quot;address2&quot;:&quot;5955 Wilburn Throughway Apt. 787\nVolkmanton, VA 14860&quot;,&quot;city&quot;:&quot;Lake Quincyville&quot;,&quot;country&quot;:&quot;South Georgia and the South Sandwich Islands&quot;,&quot;post_code&quot;:&quot;17261&quot;}}">
+                                                Rigoberto Feest</option>
+                                            <option value="8" data-id="8"
+                                                data-customer="{&quot;id&quot;:8,&quot;name&quot;:&quot;Ella Ortiz&quot;,&quot;email&quot;:&quot;amalia07@hotmail.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;615-570-7889&quot;,&quot;ip&quot;:&quot;251.84.28.182&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;190 Bayer Island&quot;,&quot;address2&quot;:&quot;63472 Huel Manor Apt. 631\nEast Tatyanabury, MT 66675-0119&quot;,&quot;city&quot;:&quot;Klockostad&quot;,&quot;country&quot;:&quot;Panama&quot;,&quot;post_code&quot;:&quot;02977-1471&quot;}}">
+                                                Ella Ortiz</option>
+                                            <option value="9" data-id="9"
+                                                data-customer="{&quot;id&quot;:9,&quot;name&quot;:&quot;Darryl Luettgen&quot;,&quot;email&quot;:&quot;lacy.reinger@wolf.com&quot;,&quot;status&quot;:&quot;disabled&quot;,&quot;phone&quot;:&quot;+1 (217) 508-0225&quot;,&quot;ip&quot;:&quot;83.81.248.217&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;808 Nedra Rapid&quot;,&quot;address2&quot;:&quot;19299 Sipes Estates\nSouth Katarinachester, WY 64328&quot;,&quot;city&quot;:&quot;Emilyside&quot;,&quot;country&quot;:&quot;Samoa&quot;,&quot;post_code&quot;:&quot;47535&quot;}}">
+                                                Darryl Luettgen</option>
+                                            <option value="10" data-id="10"
+                                                data-customer="{&quot;id&quot;:10,&quot;name&quot;:&quot;Eldon Hirthe&quot;,&quot;email&quot;:&quot;thora.kemmer@lubowitz.com&quot;,&quot;status&quot;:&quot;disabled&quot;,&quot;phone&quot;:&quot;760-532-9864&quot;,&quot;ip&quot;:&quot;52.193.252.202&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;339 Oswald Inlet&quot;,&quot;address2&quot;:&quot;62430 Janie Mountain Apt. 052\nLake Mavis, NE 74601-8443&quot;,&quot;city&quot;:&quot;Claudinechester&quot;,&quot;country&quot;:&quot;Rwanda&quot;,&quot;post_code&quot;:&quot;44086-0655&quot;}}">
+                                                Eldon Hirthe</option>
+                                            <option value="11" data-id="11"
+                                                data-customer="{&quot;id&quot;:11,&quot;name&quot;:&quot;Vallie Pagac&quot;,&quot;email&quot;:&quot;vklocko@dibbert.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;1-740-896-2419&quot;,&quot;ip&quot;:&quot;123.59.161.247&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;438 Izabella Avenue&quot;,&quot;address2&quot;:&quot;80737 Isabella Lane\nJefftown, CT 97143-4658&quot;,&quot;city&quot;:&quot;North Cheyanne&quot;,&quot;country&quot;:&quot;India&quot;,&quot;post_code&quot;:&quot;15075-9998&quot;}}">
+                                                Vallie Pagac</option>
+                                            <option value="12" data-id="12"
+                                                data-customer="{&quot;id&quot;:12,&quot;name&quot;:&quot;Erik Runolfsson&quot;,&quot;email&quot;:&quot;terry.murazik@gmail.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;463-399-0073&quot;,&quot;ip&quot;:&quot;113.194.140.102&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;2567 Farrell Mountain&quot;,&quot;address2&quot;:&quot;34542 Boehm Street\nJodietown, TX 63162&quot;,&quot;city&quot;:&quot;Nathenbury&quot;,&quot;country&quot;:&quot;Venezuela&quot;,&quot;post_code&quot;:&quot;49600-4402&quot;}}">
+                                                Erik Runolfsson</option>
+                                            <option value="13" data-id="13"
+                                                data-customer="{&quot;id&quot;:13,&quot;name&quot;:&quot;Gaylord Boyer&quot;,&quot;email&quot;:&quot;connelly.roger@frami.org&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;260.516.1287&quot;,&quot;ip&quot;:&quot;67.194.245.235&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;1564 Hermiston Square Suite 237&quot;,&quot;address2&quot;:&quot;41828 Luettgen Spur\nPort Sharonfort, CO 75695&quot;,&quot;city&quot;:&quot;Westside&quot;,&quot;country&quot;:&quot;Falkland Islands (Malvinas)&quot;,&quot;post_code&quot;:&quot;79272-6254&quot;}}">
+                                                Gaylord Boyer</option>
+                                            <option value="14" data-id="14"
+                                                data-customer="{&quot;id&quot;:14,&quot;name&quot;:&quot;Ephraim Treutel&quot;,&quot;email&quot;:&quot;senger.kayden@yahoo.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;1-512-889-5683&quot;,&quot;ip&quot;:&quot;134.128.106.124&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;961 Metz Loop&quot;,&quot;address2&quot;:&quot;36033 Stacy Roads Suite 851\nNorth Yoshiko, VA 37755&quot;,&quot;city&quot;:&quot;Marquiseshire&quot;,&quot;country&quot;:&quot;Ethiopia&quot;,&quot;post_code&quot;:&quot;96163-6430&quot;}}">
+                                                Ephraim Treutel</option>
+                                            <option value="15" data-id="15"
+                                                data-customer="{&quot;id&quot;:15,&quot;name&quot;:&quot;Mr. Raul Skiles&quot;,&quot;email&quot;:&quot;monserrate.kling@schneider.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;+1 (820) 536-6804&quot;,&quot;ip&quot;:&quot;45.23.197.105&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;43197 Jaskolski Mission&quot;,&quot;address2&quot;:&quot;9677 Hettinger Points\nLake Nickolas, NH 92339-7580&quot;,&quot;city&quot;:&quot;Howellstad&quot;,&quot;country&quot;:&quot;Marshall Islands&quot;,&quot;post_code&quot;:&quot;94249&quot;}}">
+                                                Mr. Raul Skiles</option>
+                                            <option value="16" data-id="16"
+                                                data-customer="{&quot;id&quot;:16,&quot;name&quot;:&quot;Kelvin Kunde&quot;,&quot;email&quot;:&quot;wilkinson.lambert@gerlach.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;+1 (409) 532-5448&quot;,&quot;ip&quot;:&quot;111.204.181.9&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;82002 Weber Brook&quot;,&quot;address2&quot;:&quot;384 Elisha Island\nEstherland, IA 00436&quot;,&quot;city&quot;:&quot;New Tressiemouth&quot;,&quot;country&quot;:&quot;Croatia&quot;,&quot;post_code&quot;:&quot;82544&quot;}}">
+                                                Kelvin Kunde</option>
+                                            <option value="17" data-id="17"
+                                                data-customer="{&quot;id&quot;:17,&quot;name&quot;:&quot;Hunter Crona&quot;,&quot;email&quot;:&quot;harber.camylle@yahoo.com&quot;,&quot;status&quot;:&quot;disabled&quot;,&quot;phone&quot;:&quot;(620) 963-4805&quot;,&quot;ip&quot;:&quot;38.173.249.235&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;7373 Phyllis Light Apt. 692&quot;,&quot;address2&quot;:&quot;7753 Hessel Landing\nGwenburgh, CA 21981&quot;,&quot;city&quot;:&quot;South Emmanueltown&quot;,&quot;country&quot;:&quot;Northern Mariana Islands&quot;,&quot;post_code&quot;:&quot;40306&quot;}}">
+                                                Hunter Crona</option>
+                                            <option value="18" data-id="18"
+                                                data-customer="{&quot;id&quot;:18,&quot;name&quot;:&quot;Esmeralda Fisher&quot;,&quot;email&quot;:&quot;lilian86@braun.biz&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;(347) 354-8994&quot;,&quot;ip&quot;:&quot;168.39.6.178&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;365 Kessler Corners Suite 022&quot;,&quot;address2&quot;:&quot;65303 Keebler Terrace\nEmmerichmouth, DE 51524&quot;,&quot;city&quot;:&quot;East Beatricemouth&quot;,&quot;country&quot;:&quot;New Caledonia&quot;,&quot;post_code&quot;:&quot;70949&quot;}}">
+                                                Esmeralda Fisher</option>
+                                            <option value="19" data-id="19"
+                                                data-customer="{&quot;id&quot;:19,&quot;name&quot;:&quot;Ross Feil&quot;,&quot;email&quot;:&quot;hermiston.delaney@gmail.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;239.904.4726&quot;,&quot;ip&quot;:&quot;154.3.77.215&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;5132 Sage Estate&quot;,&quot;address2&quot;:&quot;6158 Lafayette Pines Suite 416\nLake Greenmouth, ND 12395-1926&quot;,&quot;city&quot;:&quot;New Geovanny&quot;,&quot;country&quot;:&quot;Hong Kong&quot;,&quot;post_code&quot;:&quot;19401-8546&quot;}}">
+                                                Ross Feil</option>
+                                            <option value="20" data-id="20"
+                                                data-customer="{&quot;id&quot;:20,&quot;name&quot;:&quot;Asha Kub&quot;,&quot;email&quot;:&quot;vzulauf@hotmail.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;+1-725-641-3842&quot;,&quot;ip&quot;:&quot;210.129.247.154&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;73404 Connelly Square&quot;,&quot;address2&quot;:&quot;787 Bella Hill Suite 201\nFaheyside, WV 19754&quot;,&quot;city&quot;:&quot;Walkerborough&quot;,&quot;country&quot;:&quot;Burkina Faso&quot;,&quot;post_code&quot;:&quot;97429-8060&quot;}}">
+                                                Asha Kub</option>
+                                            <option value="21" data-id="21"
+                                                data-customer="{&quot;id&quot;:21,&quot;name&quot;:&quot;Mateo Conroy&quot;,&quot;email&quot;:&quot;serenity.gulgowski@yahoo.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;+1-239-352-2292&quot;,&quot;ip&quot;:&quot;221.35.61.216&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;10350 Macie Drives Apt. 073&quot;,&quot;address2&quot;:&quot;79903 Crona Rue Suite 942\nPort Jarvis, NH 72182&quot;,&quot;city&quot;:&quot;North Sammyton&quot;,&quot;country&quot;:&quot;Vanuatu&quot;,&quot;post_code&quot;:&quot;20582-5475&quot;}}">
+                                                Mateo Conroy</option>
+                                            <option value="22" data-id="22"
+                                                data-customer="{&quot;id&quot;:22,&quot;name&quot;:&quot;Jasmin Walter&quot;,&quot;email&quot;:&quot;paltenwerth@cole.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;+1-361-880-7819&quot;,&quot;ip&quot;:&quot;156.244.22.86&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;47320 Rutherford Inlet Suite 053&quot;,&quot;address2&quot;:&quot;1411 Jarret Inlet\nHauckburgh, WA 52543&quot;,&quot;city&quot;:&quot;New Opheliaville&quot;,&quot;country&quot;:&quot;Thailand&quot;,&quot;post_code&quot;:&quot;55774&quot;}}">
+                                                Jasmin Walter</option>
+                                            <option value="23" data-id="23"
+                                                data-customer="{&quot;id&quot;:23,&quot;name&quot;:&quot;Autumn Rowe&quot;,&quot;email&quot;:&quot;freddie.schinner@boehm.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;+1-239-949-1031&quot;,&quot;ip&quot;:&quot;136.65.199.224&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;4383 Bernier Ridges&quot;,&quot;address2&quot;:&quot;34089 Llewellyn Circles\nRamiromouth, MA 58545-1957&quot;,&quot;city&quot;:&quot;Svenborough&quot;,&quot;country&quot;:&quot;Malawi&quot;,&quot;post_code&quot;:&quot;31085&quot;}}">
+                                                Autumn Rowe</option>
+                                            <option value="24" data-id="24"
+                                                data-customer="{&quot;id&quot;:24,&quot;name&quot;:&quot;Theo Maggio&quot;,&quot;email&quot;:&quot;mschinner@hotmail.com&quot;,&quot;status&quot;:&quot;disabled&quot;,&quot;phone&quot;:&quot;551-586-2594&quot;,&quot;ip&quot;:&quot;98.109.139.3&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;61192 Dach Loop&quot;,&quot;address2&quot;:&quot;60111 Zackary Gardens Apt. 939\nNorth Kathlynburgh, NH 63433&quot;,&quot;city&quot;:&quot;South Ellabury&quot;,&quot;country&quot;:&quot;Uruguay&quot;,&quot;post_code&quot;:&quot;20243-1753&quot;}}">
+                                                Theo Maggio</option>
+                                            <option value="25" data-id="25"
+                                                data-customer="{&quot;id&quot;:25,&quot;name&quot;:&quot;Salvador Reilly&quot;,&quot;email&quot;:&quot;aeffertz@jast.biz&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;+16463596828&quot;,&quot;ip&quot;:&quot;169.46.22.218&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;361 Eichmann Camp&quot;,&quot;address2&quot;:&quot;9270 Hirthe Camp\nMarquisehaven, LA 29010-4219&quot;,&quot;city&quot;:&quot;Nettieshire&quot;,&quot;country&quot;:&quot;Tuvalu&quot;,&quot;post_code&quot;:&quot;58000-3743&quot;}}">
+                                                Salvador Reilly</option>
+                                            <option value="26" data-id="26"
+                                                data-customer="{&quot;id&quot;:26,&quot;name&quot;:&quot;Prof. Kristin Bergstrom Jr.&quot;,&quot;email&quot;:&quot;stracke.lori@bechtelar.info&quot;,&quot;status&quot;:&quot;disabled&quot;,&quot;phone&quot;:&quot;281.448.4635&quot;,&quot;ip&quot;:&quot;204.254.85.240&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;70291 Kohler Pass&quot;,&quot;address2&quot;:&quot;9627 Von Circle\nNorth Florian, UT 81272-1577&quot;,&quot;city&quot;:&quot;Maggioside&quot;,&quot;country&quot;:&quot;Finland&quot;,&quot;post_code&quot;:&quot;01963&quot;}}">
+                                                Prof. Kristin Bergstrom Jr.</option>
+                                            <option value="27" data-id="27"
+                                                data-customer="{&quot;id&quot;:27,&quot;name&quot;:&quot;Floyd Stracke&quot;,&quot;email&quot;:&quot;flatley.javon@gmail.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;870.808.1614&quot;,&quot;ip&quot;:&quot;6.160.202.69&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;71782 Waelchi Tunnel Apt. 878&quot;,&quot;address2&quot;:&quot;2143 Kirlin Views Apt. 350\nLolitaville, NH 75318-9572&quot;,&quot;city&quot;:&quot;Lake Leeview&quot;,&quot;country&quot;:&quot;Croatia&quot;,&quot;post_code&quot;:&quot;42658-8336&quot;}}">
+                                                Floyd Stracke</option>
+                                            <option value="28" data-id="28"
+                                                data-customer="{&quot;id&quot;:28,&quot;name&quot;:&quot;Tamara Gusikowski&quot;,&quot;email&quot;:&quot;qkulas@yahoo.com&quot;,&quot;status&quot;:&quot;disabled&quot;,&quot;phone&quot;:&quot;(610) 754-2048&quot;,&quot;ip&quot;:&quot;179.129.53.24&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;189 Oberbrunner Trail&quot;,&quot;address2&quot;:&quot;60822 Champlin Ridges Suite 231\nCamilachester, LA 71344&quot;,&quot;city&quot;:&quot;Port Alfredaland&quot;,&quot;country&quot;:&quot;Gambia&quot;,&quot;post_code&quot;:&quot;13315-1758&quot;}}">
+                                                Tamara Gusikowski</option>
+                                            <option value="29" data-id="29"
+                                                data-customer="{&quot;id&quot;:29,&quot;name&quot;:&quot;Odie Kessler&quot;,&quot;email&quot;:&quot;leora.lehner@schmitt.com&quot;,&quot;status&quot;:&quot;disabled&quot;,&quot;phone&quot;:&quot;(540) 851-8980&quot;,&quot;ip&quot;:&quot;37.5.160.85&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;243 Altenwerth Fork Suite 928&quot;,&quot;address2&quot;:&quot;335 Dickinson Mission Apt. 909\nWatsicatown, KY 73466&quot;,&quot;city&quot;:&quot;Bahringerton&quot;,&quot;country&quot;:&quot;Togo&quot;,&quot;post_code&quot;:&quot;75312-9677&quot;}}">
+                                                Odie Kessler</option>
+                                            <option value="30" data-id="30"
+                                                data-customer="{&quot;id&quot;:30,&quot;name&quot;:&quot;Kieran Walsh&quot;,&quot;email&quot;:&quot;vernie.cole@yahoo.com&quot;,&quot;status&quot;:&quot;active&quot;,&quot;phone&quot;:&quot;973.830.9619&quot;,&quot;ip&quot;:&quot;165.91.29.211&quot;,&quot;shipping_address&quot;:{&quot;address1&quot;:&quot;45631 Yadira Locks Apt. 454&quot;,&quot;address2&quot;:&quot;234 Jarret Shoal\nCheyanneview, AR 16052-4966&quot;,&quot;city&quot;:&quot;Schneiderbury&quot;,&quot;country&quot;:&quot;Guatemala&quot;,&quot;post_code&quot;:&quot;74842&quot;}}">
+                                                Kieran Walsh</option>
+                                        </select>
+                                        <button type="button" class="btn btn-light-dark px-3 ms-2"
+                                            data-bs-toggle="modal" data-bs-target="#createCustomer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-plus">
+                                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body pt-3 d-none customer-selected">
+                                    <div class="customer-name">John Doe</div>
+                                    <div class="customer-email text-muted">johndoe@gmail.com</div>
+                                    <div class="customer-phone text-muted">011111</div>
+                                </div>
+                                <div class="card-body pt-3 d-none border-top-dashed shipping-address">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="text-uppercase fw-bold">Shipping address</span>
+                                        <a href="#"
+                                            class="text-decoration-none btn btn-sm btn-link px-3 fw-bold">Edit</a>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <span class="shipping-address-address-1">8303 Melvina Crescent</span>
+                                        <span class="shipping-address-address-2">8303 Melvina Crescent</span>
+                                        <span class="shipping-address-state">Yundtton 9390</span>
+                                        <span class="shipping-address-city">Abrahamfort</span>
+                                        <span class="shipping-address-country">Saint Martin</span>
+                                    </div>
+                                </div>
+                                <div class="card-body pt-3 border-top-dashed billing-address-con d-none">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input me-2" id="show_shipping_address">
+                                        <label class="form-check-label mt-1" for="show_shipping_address">Shipping
+                                            address is the same as
+                                            billing address</label>
+                                    </div>
+
+                                    <div class="billing-address d-none mt-2">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="text-uppercase fw-bold">Billing address</span>
+                                            <a href="#"
+                                                class="text-decoration-none btn btn-sm btn-link px-3 fw-bold">Edit</a>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="billing-address-address-1">8303 Melvina Crescent</span>
+                                            <span class="billing-address-address-2">8303 Melvina Crescent</span>
+                                            <span class="billing-address-state">Yundtton 9390</span>
+                                            <span class="billing-address-city">Abrahamfort</span>
+                                            <span class="billing-address-country">Saint Martin</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header pb-0 border-0">
+                                    <h3 class="fs-8 mb-0">Notes</h3>
+                                </div>
+                                <div class="card-body pt-3">
+                                    <textarea type="text" name="notes" class="form-control mt-1"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mt-5 mx-5">
+                        <div class="ms-auto d-flex">
+                            <a href="/pages/ecommerce/order/overview.html" class="btn btn-secondary me-3">Cancel</a>
+                            <div class="btn-group dropup">
+                                <button type="button" class="btn btn-primary">
+                                    Save as draft
+                                </button>
+                                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <h6 class="dropdown-header fs-12 text-uppercase">Create with</h6>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Cash on Delivery</a></li>
+                                    <li><a class="dropdown-item" href="#">Card</a></li>
+                                    <li><a class="dropdown-item" href="#">Paypal</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="d-flex justify-content-between align-items-center h-100 px-4">
+                <div class="d-flex fs-12">
+                    <span class="text-muted fw-500">2022 </span>
+                    &copy; KopyThemes
+                </div>
+                <div clas="d-flex">
+                    <span class="text-muted fs-12">Crafted by:</span>
+                    <span class="fs-12"> KopyThemes</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Page modals -->
+    <!-- Quick search modal -->
+    <div class="modal fade" id="quickSearchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <header class="quick-search-header">
+                    <form class="quick-search-form" id="quick-search-form">
+                        <label for="docsearch-input" class="quick-search-input-label">
+                            <svg width="24" height="24" fill="none" aria-hidden="true"
+                                class="quick-search-icon flex-none">
+                                <path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                </path>
+                                <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                </circle>
+                            </svg>
+                            <div class="quick-search-spinner spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </label>
+                        <input class="quick-search-input" aria-autocomplete="list" aria-labelledby="docsearch-label"
+                            id="docsearch-input" autocomplete="off" autocorrect="off" autocapitalize="off"
+                            spellcheck="false" placeholder="Search documentation" maxlength="64" type="search">
+                    </form>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </header>
+                <div class="modal-body px-0">
+                    <div class="" id="recent-searchs">
+                        <div class="px-5">
+                            <h6 class="fs-9">Recent</h6>
+                        </div>
+                        <ul class="list-group list-group-flush mt-3">
+                            <li class="list-group-item list-group-item-action border-top border-bottom ps-5">
+                                <div class="d-flex align-items-center w-100">
+                                    <a href="#" class="text-decoration-none text-dark text-opacity-75">Card</a>
+                                    <a href="#" class="btn btn-sm ms-auto px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-bottom ps-5">
+                                <div class="d-flex align-items-center w-100">
+                                    <a href="#" class="text-decoration-none text-dark text-opacity-75">User
+                                        management</a>
+                                    <a href="#" class="btn btn-sm ms-auto px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-bottom ps-5">
+                                <div class="d-flex align-items-center w-100">
+                                    <a href="#" class="text-decoration-none text-dark text-opacity-75">Button</a>
+                                    <a href="#" class="btn btn-sm ms-auto px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-none" id="quick-search-no-result">
+                        <div class="h-32r d-flex align-items-center justify-content-center">
+                            <span class="fs-10 text-muted">No results for "</span>
+                            <span class="fs-10 quick-search-no-result-label"></span>
+                            <span class="fs-10 text-muted">"</span>
+                        </div>
+                    </div>
+                    <div class="d-none" id="quick-search-result">
+                        <div class="px-5">
+                            <h6 class="mb-3 fs-10">Results</h6>
+                            <div class="list-group list-group-separate list-group-light-primary"
+                                id="quick-search-result-list">
+                                <a href="#" class="list-group-item list-group-item-action py-3 px-4" role="presentation"
+                                    id="all-inbox-tab" data-bs-toggle="tab" data-bs-target="#all-inbox" type="button"
+                                    aria-controls="all-inbox" aria-selected="false">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex flex-column align-items-start">
+                                            <h6 class="mb-2">Account mangement</h6>
+                                            <div class="d-flex gx-2">
+                                                <span class="badge bg-light-primary py-1 px-2">App</span>
+                                            </div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="createCustomer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalLabel">Add new customer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-0 px-0">
+                    <form action="" id="formCreateCustomer">
+                        <div class="px-4 customer-details">
+                            <div class="mb-4">
+                                <label for="name">Name<span class="ms-1 fs-12 text-muted">(required)</span></label>
+                                <input type="text" name="name" class="form-control mt-1" />
+                            </div>
+                            <div class="grid gap-5">
+                                <div class="g-col-12 g-col-lg-6">
+                                    <div class="mb-4">
+                                        <label for="email">Email<span
+                                                class="ms-1 fs-12 text-muted">(required)</span></label>
+                                        <input type="email" name="email" class="form-control mt-1" />
+                                    </div>
+                                </div>
+                                <div class="g-col-12 g-col-lg-6">
+                                    <div class="mb-4">
+                                        <label for="phone">Phone</label>
+                                        <input type="text" name="phone" class="form-control mt-1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-top-dashed px-4 pt-4">
+                            <h3 class="text-uppercase mb-3 fs-11">Shipping address</h3>
+                            <div class="mb-4">
+                                <label for="address1">Address 1</label>
+                                <input type="text" name="address1" class="form-control mt-1" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="address2">Address 2</label>
+                                <input type="text" name="address2" class="form-control mt-1" />
+                            </div>
+                            <div class="grid gap-5">
+                                <div class="g-col-12 g-col-lg-6">
+                                    <div class="mb-4">
+                                        <label for="city">City</label>
+                                        <input type="text" name="city" class="form-control mt-1" />
+                                    </div>
+                                </div>
+                                <div class="g-col-12 g-col-lg-6">
+                                    <div class="mb-4">
+                                        <label for="postcode">Postcode</label>
+                                        <input type="text" name="postcode" class="form-control mt-1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid gap-5">
+                                <div class="g-col-12 g-col-lg-6">
+                                    <div class="mb-4">
+                                        <label for="state">State</label>
+                                        <input type="text" name="state" class="form-control mt-1" />
+                                    </div>
+                                </div>
+                                <div class="g-col-12 g-col-lg-6">
+                                    <div class="mb-4">
+                                        <label for="country">Country</label>
+                                        <input type="text" name="country" class="form-control mt-1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="save_customer_btn">Save customer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="editCustomer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit customer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-0 px-0">
+                    <form action="" id="formEditCustomer">
+                        <div class="px-4 customer-details">
+                            <div class="mb-4">
+                                <label for="name">Name<span class="ms-1 fs-12 text-muted">(required)</span></label>
+                                <input type="text" name="name" class="form-control mt-1" value="Ivy Ferry" />
+                            </div>
+                            <div class="grid gap-5">
+                                <div class="g-col-12 g-col-lg-6">
+                                    <div class="mb-4">
+                                        <label for="email">Email<span
+                                                class="ms-1 fs-12 text-muted">(required)</span></label>
+                                        <input type="email" name="email" class="form-control mt-1"
+                                            value="stokes.ryann@erdman.info" />
+                                    </div>
+                                </div>
+                                <div class="g-col-12 g-col-lg-6">
+                                    <div class="mb-4">
+                                        <label for="phone">Phone</label>
+                                        <input type="text" name="phone" class="form-control mt-1"
+                                            value="+1-508-546-5483" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="update_customer_btn">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="browseProducts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <div class="w-100">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="modal-title" id="exampleModalLabel">Select products</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="d-flex justify-content-between mt-3 mb-2">
+                            <span class="text-uppercase fw-bold fs-12 ms-5 text-muted">Product</span>
+                            <span class="text-uppercase fw-bold fs-12 text-muted">Stock</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body py-0 px-0">
+                    <table class="table table-text-center mb-0">
+                        <thead class="d-none">
+                            <tr>
+                                <th class="pe-0">&nbsp;</th>
+                                <th class="ps-5">Image</th>
+                                <th class="ps-5">Product</th>
+                                <th class="text-end pe-5">Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100001" data-id="100001"
+                                            data-product-title="Anchor bracelet mens"
+                                            data-product-image="http://localhost:8080/img/products/anchor-bracelet-mens.jpg"
+                                            data-product-price="34.94" data-product-stock="50"
+                                            data-product-sku="1000001">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/anchor-bracelet-mens.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Anchor bracelet
+                                            mens</a>
+                                        <span class="text-muted">1000001</span>
+                                        <span class="fw-bold">$34.94</span>
+                                    </div>
+                                </td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100002" data-id="100002" data-product-title="Black bag"
+                                            data-product-image="http://localhost:8080/img/products/black-bag-over-the-shoulder.jpg"
+                                            data-product-price="23.7" data-product-stock="20"
+                                            data-product-sku="1000002">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/black-bag-over-the-shoulder.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Black bag</a>
+                                        <span class="text-muted">1000002</span>
+                                        <span class="fw-bold">$23.7</span>
+                                    </div>
+                                </td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100003" data-id="100003"
+                                            data-product-title="Black cellphone with lit screen"
+                                            data-product-image="http://localhost:8080/img/products/black-cellphone-with-lit-screen-floating-over-white-background.jpg"
+                                            data-product-price="79.5" data-product-stock="10"
+                                            data-product-sku="1000003">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/black-cellphone-with-lit-screen-floating-over-white-background.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Black cellphone with
+                                            lit screen</a>
+                                        <span class="text-muted">1000003</span>
+                                        <span class="fw-bold">$79.5</span>
+                                    </div>
+                                </td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100004" data-id="100004"
+                                            data-product-title="Black fashion backpack"
+                                            data-product-image="http://localhost:8080/img/products/black-fashion-backpack.jpg"
+                                            data-product-price="12" data-product-stock="25" data-product-sku="1000004">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/black-fashion-backpack.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Black fashion
+                                            backpack</a>
+                                        <span class="text-muted">1000004</span>
+                                        <span class="fw-bold">$12</span>
+                                    </div>
+                                </td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100005" data-id="100005"
+                                            data-product-title="Blue shower speaker"
+                                            data-product-image="http://localhost:8080/img/products/blue-shower-speaker.jpg"
+                                            data-product-price="12" data-product-stock="60" data-product-sku="1000005">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/blue-shower-speaker.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Blue shower
+                                            speaker</a>
+                                        <span class="text-muted">1000005</span>
+                                        <span class="fw-bold">$12</span>
+                                    </div>
+                                </td>
+                                <td>60</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100006" data-id="100006" data-product-title="Blue t-shirt"
+                                            data-product-image="http://localhost:8080/img/products/blue-t-shirt.jpg"
+                                            data-product-price="7.5" data-product-stock="60" data-product-sku="1000006">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/blue-t-shirt.jpg" alt="Product"
+                                            style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Blue t-shirt</a>
+                                        <span class="text-muted">1000006</span>
+                                        <span class="fw-bold">$7.5</span>
+                                    </div>
+                                </td>
+                                <td>60</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100007" data-id="100007" data-product-title="Boho earrings"
+                                            data-product-image="http://localhost:8080/img/products/boho-earrings.jpg"
+                                            data-product-price="7.5" data-product-stock="45" data-product-sku="1000007">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/boho-earrings.jpg" alt="Product"
+                                            style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Boho earrings</a>
+                                        <span class="text-muted">1000007</span>
+                                        <span class="fw-bold">$7.5</span>
+                                    </div>
+                                </td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100008" data-id="100008"
+                                            data-product-title="Bright red purse with gold"
+                                            data-product-image="http://localhost:8080/img/products/bright-red-purse-with-gold.jpg"
+                                            data-product-price="45" data-product-stock="34" data-product-sku="1000008">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/bright-red-purse-with-gold.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Bright red purse with
+                                            gold</a>
+                                        <span class="text-muted">1000008</span>
+                                        <span class="fw-bold">$45</span>
+                                    </div>
+                                </td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100009" data-id="100009"
+                                            data-product-title="buddha-bracelet-for-men"
+                                            data-product-image="http://localhost:8080/img/products/buddha-bracelet-for-men.jpg"
+                                            data-product-price="13.5" data-product-stock="34"
+                                            data-product-sku="1000009">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/buddha-bracelet-for-men.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#"
+                                            class="text-dark fw-bold text-decoration-none">buddha-bracelet-for-men</a>
+                                        <span class="text-muted">1000009</span>
+                                        <span class="fw-bold">$13.5</span>
+                                    </div>
+                                </td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100010" data-id="100010"
+                                            data-product-title="Classic striped tee"
+                                            data-product-image="http://localhost:8080/img/products/classic-striped-tee.jpg"
+                                            data-product-price="9.69" data-product-stock="49"
+                                            data-product-sku="1000010">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/classic-striped-tee.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Classic striped
+                                            tee</a>
+                                        <span class="text-muted">1000010</span>
+                                        <span class="fw-bold">$9.69</span>
+                                    </div>
+                                </td>
+                                <td>49</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100011" data-id="100011" data-product-title="Cute cat bowtie"
+                                            data-product-image="http://localhost:8080/img/products/cute-cat-bowtie.jpg"
+                                            data-product-price="3.7" data-product-stock="12" data-product-sku="1000011">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/cute-cat-bowtie.jpg" alt="Product"
+                                            style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Cute cat bowtie</a>
+                                        <span class="text-muted">1000011</span>
+                                        <span class="fw-bold">$3.7</span>
+                                    </div>
+                                </td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100012" data-id="100012"
+                                            data-product-title="Dainty gold necklace"
+                                            data-product-image="http://localhost:8080/img/products/dainty-gold-necklace.jpg"
+                                            data-product-price="56" data-product-stock="56" data-product-sku="1000012">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/dainty-gold-necklace.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Dainty gold
+                                            necklace</a>
+                                        <span class="text-muted">1000012</span>
+                                        <span class="fw-bold">$56</span>
+                                    </div>
+                                </td>
+                                <td>56</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100013" data-id="100013" data-product-title="DIY beard balm"
+                                            data-product-image="http://localhost:8080/img/products/DIY-beard-balm.jpg"
+                                            data-product-price="6.99" data-product-stock="70"
+                                            data-product-sku="1000013">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/DIY-beard-balm.jpg" alt="Product"
+                                            style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">DIY beard balm</a>
+                                        <span class="text-muted">1000013</span>
+                                        <span class="fw-bold">$6.99</span>
+                                    </div>
+                                </td>
+                                <td>70</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100014" data-id="100014"
+                                            data-product-title="Fun pool drink holder"
+                                            data-product-image="http://localhost:8080/img/products/fun-pool-drink-holder.jpg"
+                                            data-product-price="4.55" data-product-stock="20"
+                                            data-product-sku="1000014">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/fun-pool-drink-holder.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Fun pool drink
+                                            holder</a>
+                                        <span class="text-muted">1000014</span>
+                                        <span class="fw-bold">$4.55</span>
+                                    </div>
+                                </td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100015" data-id="100015"
+                                            data-product-title="Fun teal swim trunks"
+                                            data-product-image="http://localhost:8080/img/products/fun-teal-swim-trunks.jpg"
+                                            data-product-price="3.79" data-product-stock="30"
+                                            data-product-sku="1000015">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/fun-teal-swim-trunks.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Fun teal swim
+                                            trunks</a>
+                                        <span class="text-muted">1000015</span>
+                                        <span class="fw-bold">$3.79</span>
+                                    </div>
+                                </td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100016" data-id="100016" data-product-title="Galaxy earrings"
+                                            data-product-image="http://localhost:8080/img/products/galaxy-earrings.jpg"
+                                            data-product-price="55" data-product-stock="30" data-product-sku="1000016">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/galaxy-earrings.jpg" alt="Product"
+                                            style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Galaxy earrings</a>
+                                        <span class="text-muted">1000016</span>
+                                        <span class="fw-bold">$55</span>
+                                    </div>
+                                </td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100017" data-id="100017"
+                                            data-product-title="Gold zipper on black fashion backpack"
+                                            data-product-image="http://localhost:8080/img/products/gold-zipper-on-black-fashion-backpack.jpg"
+                                            data-product-price="23.89" data-product-stock="23"
+                                            data-product-sku="1000017">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/gold-zipper-on-black-fashion-backpack.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Gold zipper on black
+                                            fashion backpack</a>
+                                        <span class="text-muted">1000017</span>
+                                        <span class="fw-bold">$23.89</span>
+                                    </div>
+                                </td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100018" data-id="100018" data-product-title="Kids harem pant"
+                                            data-product-image="http://localhost:8080/img/products/kids-harem-pant.jpg"
+                                            data-product-price="13.99" data-product-stock="34"
+                                            data-product-sku="1000018">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/kids-harem-pant.jpg" alt="Product"
+                                            style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Kids harem pant</a>
+                                        <span class="text-muted">1000018</span>
+                                        <span class="fw-bold">$13.99</span>
+                                    </div>
+                                </td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100019" data-id="100019"
+                                            data-product-title="Light up sneakers women"
+                                            data-product-image="http://localhost:8080/img/products/light-up-sneakers-women.jpg"
+                                            data-product-price="25" data-product-stock="56" data-product-sku="1000019">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/light-up-sneakers-women.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Light up sneakers
+                                            women</a>
+                                        <span class="text-muted">1000019</span>
+                                        <span class="fw-bold">$25</span>
+                                    </div>
+                                </td>
+                                <td>56</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100020" data-id="100020" data-product-title="Little black dress"
+                                            data-product-image="http://localhost:8080/img/products/little-black-dress.jpg"
+                                            data-product-price="33.9" data-product-stock="56"
+                                            data-product-sku="1000020">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/little-black-dress.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Little black
+                                            dress</a>
+                                        <span class="text-muted">1000020</span>
+                                        <span class="fw-bold">$33.9</span>
+                                    </div>
+                                </td>
+                                <td>56</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100021" data-id="100021"
+                                            data-product-title="Mini bluetooth speaker"
+                                            data-product-image="http://localhost:8080/img/products/mini-bluetooth-speaker.jpg"
+                                            data-product-price="25" data-product-stock="66" data-product-sku="1000021">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/mini-bluetooth-speaker.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Mini bluetooth
+                                            speaker</a>
+                                        <span class="text-muted">1000021</span>
+                                        <span class="fw-bold">$25</span>
+                                    </div>
+                                </td>
+                                <td>66</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100022" data-id="100022" data-product-title="Modern time pieces"
+                                            data-product-image="http://localhost:8080/img/products/modern-time-pieces.jpg"
+                                            data-product-price="21" data-product-stock="70" data-product-sku="1000022">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/modern-time-pieces.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Modern time
+                                            pieces</a>
+                                        <span class="text-muted">1000022</span>
+                                        <span class="fw-bold">$21</span>
+                                    </div>
+                                </td>
+                                <td>70</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100023" data-id="100023"
+                                            data-product-title="Purple gemstone necklace"
+                                            data-product-image="http://localhost:8080/img/products/purple-gemstone-necklace.jpg"
+                                            data-product-price="22.9" data-product-stock="10"
+                                            data-product-sku="1000023">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/purple-gemstone-necklace.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Purple gemstone
+                                            necklace</a>
+                                        <span class="text-muted">1000023</span>
+                                        <span class="fw-bold">$22.9</span>
+                                    </div>
+                                </td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100024" data-id="100024" data-product-title="Red t-shirt"
+                                            data-product-image="http://localhost:8080/img/products/red-t-shirt.jpg"
+                                            data-product-price="22.9" data-product-stock="25"
+                                            data-product-sku="1000024">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/red-t-shirt.jpg" alt="Product"
+                                            style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Red t-shirt</a>
+                                        <span class="text-muted">1000024</span>
+                                        <span class="fw-bold">$22.9</span>
+                                    </div>
+                                </td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100025" data-id="100025" data-product-title="Sport headphones"
+                                            data-product-image="http://localhost:8080/img/products/sport-headphones.jpg"
+                                            data-product-price="1.9" data-product-stock="5" data-product-sku="1000025">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/sport-headphones.jpg" alt="Product"
+                                            style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Sport headphones</a>
+                                        <span class="text-muted">1000025</span>
+                                        <span class="fw-bold">$1.9</span>
+                                    </div>
+                                </td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100026" data-id="100026"
+                                            data-product-title="Stacked bracelets set"
+                                            data-product-image="http://localhost:8080/img/products/stacked-bracelets-set.jpg"
+                                            data-product-price="2.9" data-product-stock="5" data-product-sku="1000026">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/stacked-bracelets-set.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Stacked bracelets
+                                            set</a>
+                                        <span class="text-muted">1000026</span>
+                                        <span class="fw-bold">$2.9</span>
+                                    </div>
+                                </td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100027" data-id="100027"
+                                            data-product-title="Waterproof iphone speaker"
+                                            data-product-image="http://localhost:8080/img/products/waterproof-iphone-speaker.jpg"
+                                            data-product-price="19" data-product-stock="13" data-product-sku="1000027">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/waterproof-iphone-speaker.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Waterproof iphone
+                                            speaker</a>
+                                        <span class="text-muted">1000027</span>
+                                        <span class="fw-bold">$19</span>
+                                    </div>
+                                </td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100028" data-id="100028"
+                                            data-product-title="White lace layered tee"
+                                            data-product-image="http://localhost:8080/img/products/white-lace-layered-tee.jpg"
+                                            data-product-price="2" data-product-stock="9" data-product-sku="1000028">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/white-lace-layered-tee.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">White lace layered
+                                            tee</a>
+                                        <span class="text-muted">1000028</span>
+                                        <span class="fw-bold">$2</span>
+                                    </div>
+                                </td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100029" data-id="100029" data-product-title="Wrist watches"
+                                            data-product-image="http://localhost:8080/img/products/wrist-watches.jpg"
+                                            data-product-price="22.9" data-product-stock="20"
+                                            data-product-sku="1000029">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/wrist-watches.jpg" alt="Product"
+                                            style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Wrist watches</a>
+                                        <span class="text-muted">1000029</span>
+                                        <span class="fw-bold">$22.9</span>
+                                    </div>
+                                </td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" name="product_selection" class="form-check-input me-2"
+                                            id="product-100030" data-id="100030" data-product-title="Yoga block product"
+                                            data-product-image="http://localhost:8080/img/products/yoga-block-product-photo.jpg"
+                                            data-product-price="5.9" data-product-stock="5" data-product-sku="1000030">
+                                    </div>
+                                </td>
+                                <td style="width: 80px;" class="ps-0">
+                                    <div style="width: 46px; height: 46px;">
+                                        <img src="http://localhost:8080/img/products/yoga-block-product-photo.jpg"
+                                            alt="Product" style="width: 46px; height: 100%; border-radius: 0.25rem;" />
+                                    </div>
+                                </td>
+                                <td class="ps-0">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="text-dark fw-bold text-decoration-none">Yoga block
+                                            product</a>
+                                        <span class="text-muted">1000030</span>
+                                        <span class="fw-bold">$5.9</span>
+                                    </div>
+                                </td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="add_products_btn">Add products</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="addOrderDiscount" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalLabel">Add discount</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-0">
+                    <form action="" id="formAddDiscount">
+                        <div class="grid gap-5">
+                            <div class="g-col-12 g-col-lg-6">
+                                <div class="mb-4">
+                                    <label for="email">Discount type</label>
+                                    <select name="discount_type" class="form-control mt-1">
+                                        <option value="percentage">Percentage</option>
+                                        <option value="amount">Amount</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="g-col-12 g-col-lg-6">
+                                <div class="mb-4">
+                                    <label for="discount_amount">Amount</label>
+                                    <input type="text" name="discount_amount" class="form-control mt-1" />
+
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="reason">Reason</label>
+                            <input type="text" name="reason" class="form-control mt-1" />
+                            <span class="text-muted fs-12">Your customers can see this reason</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="addOrderShippingCost" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalLabel">Add shipping cost</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-0">
+                    <form action="" id="formAddOrderShippingCost">
+                        <div>
+                            <label for="shipping_cost">Amount</label>
+                            <input type="text" name="shipping_cost" class="form-control mt-1" />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of page modals -->
+
+    <!-- General JS Scripts -->
+    <script src="/js/main.min.js"></script>
+
+    <!-- JS Libraies -->
+    <script src="/node_modules/select2/dist/js/select2.full.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/scripts.js"></script>
+
+    <!-- Template JS File -->
+
+    <!-- Page Specific JS File -->
+    <script src="/js/page/quick_search.js"></script>
+    <script src="/js/page/new_order.js"></script>
+</body>
+
+</html>

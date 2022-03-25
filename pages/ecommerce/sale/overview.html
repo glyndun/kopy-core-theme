@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Sales &mdash; Admin</title>
+    <!--begin::Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <!--end::Fonts-->
+    <!-- General CSS Files -->
+    <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="/node_modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="/node_modules/datatables/media/css/jquery.dataTables.min.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Page Specific Css File -->
+</head>
+
+<body class="menu-active position-ralative">
+    <div class="wrapper">
+        <aside class="side-nav" id="sidebar">
+            <div class="flex-column-fluid">
+                <div class="sidebar-scroll hover-scroll-overlay-y" id="sidebar-menu" data-sidebar-menu="true"
+                    data-scroll-dependencies="{default: '#sidebar_footer', lg: '#header, #sidebar_footer'}"
+                    style="height: 285px;">
+                    <div class="sidebar-toolbar">
+                        <div class="sidebar-search-header"></div>
+                        <div class="sidebar-search-container">
+                            <button class="btn search-btn" data-bs-toggle="modal" data-bs-target="#quickSearchModal">
+                                <svg width="24" height="24" fill="none" aria-hidden="true" class="me-2 flex-none">
+                                    <path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </circle>
+                                </svg>
+                                Quick search...
+                            </button>
+                        </div>
+                        <div class="sidebar-search-footer"></div>
+                    </div>
+
+                    <nav class="drawer accordion" id="drawerAccordion">
+                        <div class="drawer-menu">
+                            <div class="nav">
+                                <a href="#" class="nav-link accordion-button collapsed active" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseDashboards" aria-expanded="false"
+                                    aria-controls="collapseDashboards">
+                                    <svg class="nav-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                                    </svg>
+                                    Dashboard
+                                </a>
+                                <div id="collapseDashboards" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#drawerAccordion">
+                                    <div class="drawer-menu-nested nav">
+                                        <a class="nav-link active" href="/pages/index.html">General Dashboard</a>
+                                        <a class="nav-link" href="/pages/index.html">Ecommerce Dashboard</a>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false"
+                                    aria-controls="collapseLayouts">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                                    </svg>
+                                    Layouts
+                                </a>
+                                <div id="collapseLayouts" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseLayouts" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/index.html">General Dashboard</a>
+                                        <a class="nav-link" href="/pages/index.html">Ecommerce Dashboard</a>
+                                    </nav>
+                                </div>
+                                <div class="drawer-menu-heading mt-3">Pages</div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseAuthPages" aria-expanded="false"
+                                    aria-controls="collapseAuthPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                                    </svg>
+                                    Authentication
+                                </a>
+                                <div id="collapseAuthPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseAuthPages" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/auth/login.html">Sign in</a>
+                                        <a class="nav-link" href="/pages/auth/register.html">Sign up</a>
+                                        <a class="nav-link" href="/pages/auth/reset-password.html">Reset Password</a>
+                                        <a class="nav-link" href="/pages/auth/email-verification.html">Email
+                                            Verification</a>
+                                    </nav>
+                                </div>
+                                <div class="drawer-menu-heading mt-3">Apps</div>
+                                <a href="#" class="nav-link accordion-button collapsed active" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseCommercePages"
+                                    aria-expanded="false" aria-controls="collapseCommercePages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                    eCommerce
+                                </a>
+                                <div id="collapseCommercePages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseCommercePages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="eCommerceDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link accordion-button collapsed active" href="#" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseCommerceProductPages"
+                                                aria-expanded="false"
+                                                aria-controls="collapseCommerceProductPages">Products</a>
+                                            <div id="collapseCommerceProductPages" class="accordion-collapse collapse"
+                                                aria-labelledby="collapseCommerceProductPages"
+                                                data-bs-parent="#eCommerceDrawerAccordion">
+                                                <nav class="drawer-menu-nested nav">
+                                                    <a class="nav-link active"
+                                                        href="/pages/ecommerce/product/overview.html">Overview</a>
+                                                    <a class="nav-link" href="/pages/ecommerce/product/create.html">Add
+                                                        Product</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/product/catalog.html">Catalog</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link accordion-button collapsed" href="#" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseCommerceSalesPages"
+                                                aria-expanded="false"
+                                                aria-controls="collapseCommerceSalesPages">Sales</a>
+                                            <div id="collapseCommerceSalesPages" class="accordion-collapse collapse"
+                                                aria-labelledby="collapseCommerceSalesPages"
+                                                data-bs-parent="#eCommerceDrawerAccordion">
+                                                <nav class="drawer-menu-nested nav">
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/sale/overview.html">Overview</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link" href="/pages/auth/customers.html">Customers</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseInboxesPages"
+                                    aria-expanded="false" aria-controls="collapseInboxesPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                                    </svg>
+                                    Email
+                                </a>
+                                <div id="collapseInboxesPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseInboxesPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/email/inbox.html">Inbox</a>
+                                            <a class="nav-link" href="/pages/email/compose.html">Compose</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="drawer-menu-heading mt-3">UI Toolkit</div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseComponents" aria-expanded="false"
+                                    aria-controls="collapseComponents">
+                                    <svg class="nav-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                    </svg>
+                                    Components
+                                </a>
+                                <div id="collapseComponents" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseComponents" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/bootstrap-accordion.html">Accordion</a>
+                                        <a class="nav-link" href="/pages/bootstrap-alert.html">Alert</a>
+                                        <a class="nav-link" href="/pages/bootstrap-badge.html">Badge</a>
+                                        <a class="nav-link" href="/pages/components/buttons.html">Buttons</a>
+                                        <a class="nav-link" href="bootstrap-card.html">Card</a>
+                                        <a class="nav-link" href="bootstrap-carousel.html">Carousel</a>
+                                        <a class="nav-link" href="bootstrap-collapse.html">Collapse</a>
+                                        <a class="nav-link" href="bootstrap-dropdown.html">Dropdown</a>
+                                        <a class="nav-link" href="bootstrap-form.html">Form</a>
+                                        <a class="nav-link" href="bootstrap-list-group.html">List Group</a>
+                                        <a class="nav-link" href="bootstrap-media-object.html">Media Object</a>
+                                        <a class="nav-link" href="bootstrap-modal.html">Modal</a>
+                                        <a class="nav-link" href="bootstrap-nav.html">Nav</a>
+                                        <a class="nav-link" href="bootstrap-navbar.html">Navbar</a>
+                                        <a class="nav-link" href="bootstrap-pagination.html">Pagination</a>
+                                        <a class="nav-link" href="bootstrap-popover.html">Popover</a>
+                                        <a class="nav-link" href="bootstrap-progress.html">Progress</a>
+                                        <a class="nav-link" href="bootstrap-table.html">Table</a>
+                                        <a class="nav-link" href="bootstrap-tooltip.html">Tooltip</a>
+                                        <a class="nav-link" href="bootstrap-typography.html">Typography</a>
+                                    </nav>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseIconPages" aria-expanded="false"
+                                    aria-controls="collapseIconPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                    </svg>
+                                    Icons
+                                </a>
+                                <div id="collapseIconPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseIconPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="iconsDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link accordion-button collapsed" href="#" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseIconFontawesomePages"
+                                                aria-expanded="false" aria-controls="collapseIconFontawesomePages">Font
+                                                Awesome
+                                                5</a>
+                                            <div id="collapseIconFontawesomePages" class="accordion-collapse collapse"
+                                                aria-labelledby="collapseIconFontawesomePages"
+                                                data-bs-parent="#iconsDrawerAccordion">
+                                                <nav class="drawer-menu-nested nav">
+                                                    <a class="nav-link"
+                                                        href="/pages/icons/fontawesome-regular.html">Regular</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/icons/fontawesome-solid.html">Solid</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/icons/fontawesome-brand.html">Brands</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link" href="/pages/icons/feather.html">Feather</a>
+                                            <a class="nav-link" href="/pages/icons/octicon.html">Octicons</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link active" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    Builder
+                                </a>
+                            </div>
+                        </div>
+                        <div class="drawer-footer"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <!--begin::Footer-->
+            <div class="sidebar-footer flex-column-auto" id="sidebar_footer">
+                <div class="sidebar-title mb-2 px-4">Profile</div>
+                <div class="d-flex px-4">
+                    <img class="user-image rounded-circle me-3" src="/img/avatar/user-1.jpg" alt="Profile">
+                    <div class="flex-row-fluid flex-wrap flex-grow-1">
+                        <div class="d-flex flex-column justify-content-center">
+                            <h3 class="text-white text-decoration-none fs-11 mb-0 fw-normal">John Doe</h3>
+                            <span class="text-muted fs-12">Manager</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button type="button"
+                            class="dropdown-toggle dropdown-no-caret dropdown-toggle-split btn bt-sm px-1 py-1 text-muted text-muted-hover"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu w-60r p-3">
+                            <li>
+                                <div class="d-flex">
+                                    <img class="user-image rounded-circle me-3" src="/img/avatar/user-1.jpg"
+                                        alt="Profile">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <h3 class="text-dark text-decoration-none fs-11 mb-0 fw-bold">John Doe</h3>
+                                        <span class="text-muted fs-12">Manager</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/profile.html">My
+                                    Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/profile.html">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/profile.html">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end::Footer-->
+        </aside>
+        <div class="content-wrapper">
+            <header class="navbar-head" id="header">
+                <div class="navbar-brand">
+                    <a href="/pages/index.html" class="d-flex align-items-center text-decoration-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-danger me-2" width="26" height="26"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z" />
+                            <path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z" />
+                        </svg>
+                        <h4 class="text-white mb-0">Kopy</h4>
+                    </a>
+
+                    <button type="button" class="btn toggle-menu px-1" data-toggle-menu="lg">
+                        <svg class="minimize-opt minimize-active" xmlns="http://www.w3.org/2000/svg" width="22"
+                            height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            class="minimize-opt minimize-hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="navbar-toolbar">
+                    <div
+                        class="container-fluid container-fluid py-6 py-lg-0 d-flex align-items-lg-stretch justify-content-lg-between">
+                        <button type="button" class="btn px-1 toggle-menu-mobile" data-toggle-menu="mini">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="d-flex justify-content-center flex-column">
+                            <h1 class="d-flex flex-column fw-bold fs-9 mb-0">
+                                Sales
+                            </h1>
+                            <ul class="breadcrumb fw-normal">
+                                <li class="breadcrumb-item text-muted">
+                                    <a href="/pages/index.html" class="text-muted text-hover-primary">Home</a>
+                                </li>
+                                <li class="breadcrumb-item text-dark">Sales</li>
+                            </ul>
+                        </div>
+
+                        <ul class="nav navbar-top-links navbar-right align-items-center">
+                            <li>
+                                <button class="btn search-btn me-3" style="width: 240px;" data-bs-toggle="modal"
+                                    data-bs-target="#quickSearchModal">
+                                    <svg width="24" height="24" fill="none" aria-hidden="true"
+                                        class="text-gray-400 me-2 flex-none">
+                                        <path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                        <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                        </circle>
+                                    </svg>
+                                    Quick search...
+                                </button>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <button type="button"
+                                        class="dropdown-toggle position-relative dropdown-no-caret btn bt-sm px-2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg width="24" height="24" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                                        </svg>
+                                        <span
+                                            class="position-absolute top-7 -right-2 translate-middle p-1 bg-amber-500 border-2 border-solid border-white rounded-circle animate-pulse">
+                                            <span class="visually-hidden">New alerts</span>
+                                        </span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end p-0 dropdown-notifications w-96r"
+                                        id="messages">
+                                        <div class="d-flex align-items-center justify-content-between pt-3 px-4 pb-2">
+                                            <h3 class="fs-9 text-dark mb-0">Messages</h3>
+                                            <a href="#" class="text-dark fs-11 fw-bold text-decoration-none">Mark
+                                                all as
+                                                read</a>
+                                        </div>
+                                        <div class="my-1 overflow-auto hover-scroll-overlay-y">
+                                            <div class="notification-header-divider"></div>
+                                            <ul class="notification-list px-3">
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3">
+                                                            <img src="/img/avatar/user-2.jpg" alt="User"
+                                                                class="user-image rounded-circle">
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    James Stone
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">1 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Lorem ipsum dolor sit amet consectetur adipisicing.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3 position-relative">
+                                                            <img src="/img/avatar/user-3.jpg" alt="User"
+                                                                class="user-image rounded-circle">
+                                                            <span
+                                                                class="position-absolute top-7 right-2 translate-middle p-1 bg-emerald-500 border-2 border-solid rounded-circle">
+                                                                <span class="visually-hidden">New alerts</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    Sara Jane
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">3 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Consectetur, blanditiis!
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3">
+                                                            <img src="/img/avatar/user-5.jpg" alt="User"
+                                                                class="user-image rounded-circle">
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    Chris James
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">5 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Lorem ipsum dolor sit, amet consectetur adipisicing
+                                                                elit. Sequi?
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3">
+                                                            <img src="/img/avatar/user-4.jpg" alt="User"
+                                                                class="user-image rounded-circle">
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    Justine Kim
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">10 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                elit. Possimus,
+                                                                atque. Laborum.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-grid px-3 pb-2">
+                                            <a href="#" class="btn btn-link fw-bold">View all messages</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <button type="button"
+                                        class="dropdown-toggle position-relative dropdown-no-caret btn btn-sm px-2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg width="24" height="24" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                                        </svg>
+                                        <span
+                                            class="position-absolute top-6 -right-2 translate-middle p-1 bg-amber-500 border-2 border-solid border-white rounded-circle animate-pulse">
+                                            <span class="visually-hidden">New alerts</span>
+                                        </span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-notifications p-0 w-96r"
+                                        id="notifications">
+                                        <div class="d-flex align-items-center justify-content-between pt-3 px-4 pb-2">
+                                            <h3 class="fs-9 text-dark mb-0">Notifications</h3>
+                                            <a href="#" class="text-dark fs-11 fw-bold text-decoration-none">Mark
+                                                all as
+                                                read</a>
+                                        </div>
+                                        <div class="my-1 overflow-auto hover-scroll-overlay-y">
+                                            <ul class="notification-list px-3">
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3">
+                                                            <img src="/img/avatar/user-2.jpg" alt="User"
+                                                                class="user-image rounded-circle">
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    James Stone
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">1 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Update template for Bugs header.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3 position-relative">
+                                                            <img src="/img/avatar/user-3.jpg" alt="User"
+                                                                class="user-image rounded-circle">
+                                                            <span
+                                                                class="position-absolute top-7 -right-2 translate-middle p-1 bg-emerald-500 border-2 border-solid border-white rounded-circle">
+                                                                <span class="visually-hidden">New alerts</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    Sara Jane
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">3 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Marked the <span class="text-amber-500">Bugs
+                                                                    Checker</span> as done.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3">
+                                                            <img src="/img/avatar/user-5.jpg" alt="User"
+                                                                class="user-image rounded-circle">
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    Chris James
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">5 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Assigned <span class="text-sky-500">John Doe</span> as
+                                                                developer for the project
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3">
+                                                            <img src="/img/avatar/user-4.jpg" alt="User"
+                                                                class="user-image rounded-circle">
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    Justine Kim
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">10 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Ask to call you.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-grid px-3 pb-2">
+                                            <a href="#" class="btn btn-link fw-bold">View all notifications</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <div class="container-xxl mt-5">
+                    Hello
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="d-flex justify-content-between align-items-center h-100 px-4">
+                <div class="d-flex fs-11">
+                    <span class="text-muted fw-500">2022 </span>
+                    &copy; KopyThemes
+                </div>
+                <div clas="d-flex">
+                    <span class="text-muted fs-11">Crafted by:</span>
+                    <span class="fs-11"> KopyThemes</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Page modals -->
+    <!-- Modal -->
+    <div class="modal fade" id="exportProducts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalLabel">Export products</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-0">
+                    <label class="mb-1 fw-bold">Export</label>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="export" id="current_page" checked>
+                        <label class="form-check-label" for="current_page">
+                            Current page
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="export" id="all_product">
+                        <label class="form-check-label" for="all_product">
+                            All products
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="export" id="selected_products">
+                        <label class="form-check-label" for="selected_products">
+                            0 selected products
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="export" id="search_match">
+                        <label class="form-check-label" for="search_match">
+                            3 products that matches the search
+                        </label>
+                    </div>
+
+                    <label class="mb-1 mt-4 fw-bold">Export as</label>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="export_type" id="excel" checked>
+                        <label class="form-check-label" for="excel">
+                            Excel file
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="export_type" id="csv">
+                        <label class="form-check-label" for="csv">
+                            Plain CSV file
+                        </label>
+                    </div>
+                    <p class="mt-3 mb-0">Learn more about <a href="#" class="text-sky-700">exporting products to CSV
+                            file.</a></p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Export products</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="importProducts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalLabel">Import products by excel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-0">
+                    <p>Download a <a href="#" class="text-sky-700">sample Excel template</a> to see an
+                        example of the format required.</p>
+
+                    <div class="d-grid mb-3">
+                        <form action="/target" class="dropzone" id="file"></form>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input me-2" id="overwrite_existing">
+                        <label class="form-check-label" for="overwrite_existing">Overwrite any current products that
+                            have the same handle. Existing values will be used for any missing columns.</label>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Upload and continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of page modals -->
+
+    <!-- General JS Scripts -->
+    <script src="/js/main.min.js"></script>
+
+    <!-- JS Libraies -->
+    <script src="/node_modules/select2/dist/js/select2.full.min.js"></script>
+    <script src="/node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/scripts.js"></script>
+
+    <!-- Template JS File -->
+
+    <!-- Page Specific JS File -->
+</body>
+
+</html>

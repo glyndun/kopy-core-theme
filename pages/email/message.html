@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Message &mdash; Admin</title>
+    <!--begin::Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <!--end::Fonts-->
+    <!-- General CSS Files -->
+    <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <!-- CSS Libraries -->
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Page Specific Css File -->
+</head>
+
+<body class="menu-active position-ralative">
+    <div class="wrapper">
+        <aside class="side-nav" id="sidebar">
+            <div class="flex-column-fluid">
+                <div class="sidebar-scroll hover-scroll-overlay-y" id="sidebar-menu" data-sidebar-menu="true"
+                    data-scroll-dependencies="{default: '#sidebar_footer', lg: '#header, #sidebar_footer'}"
+                    style="height: 285px;">
+                    <div class="sidebar-toolbar">
+                        <div class="sidebar-search-header"></div>
+                        <div class="sidebar-search-container">
+                            <button class="btn search-btn" data-bs-toggle="modal" data-bs-target="#quickSearchModal">
+                                <svg width="24" height="24" fill="none" aria-hidden="true" class="me-2 flex-none">
+                                    <path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </circle>
+                                </svg>
+                                Quick search...
+                            </button>
+                        </div>
+                        <div class="sidebar-search-footer"></div>
+                    </div>
+
+                    <nav class="drawer accordion" id="drawerAccordion">
+                        <div class="drawer-menu">
+                            <div class="nav">
+                                <a href="#" class="nav-link accordion-button collapsed active" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseDashboards" aria-expanded="false"
+                                    aria-controls="collapseDashboards">
+                                    <svg class="nav-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                                    </svg>
+                                    Dashboard
+                                </a>
+                                <div id="collapseDashboards" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#drawerAccordion">
+                                    <div class="drawer-menu-nested nav">
+                                        <a class="nav-link active" href="/pages/index.html">Dashboard 1</a>
+                                        <a class="nav-link" href="/pages/dashboard-2.html">Dashboard 2</a>
+                                        <a class="nav-link" href="/pages/dashboard-3.html">Dashboard 3</a>
+                                        <a class="nav-link" href="/pages/dashboard-4.html">Dashboard 4</a>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false"
+                                    aria-controls="collapseLayouts">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                                    </svg>
+                                    Layouts
+                                </a>
+                                <div id="collapseLayouts" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseLayouts" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/index.html">General Dashboard</a>
+                                        <a class="nav-link" href="/pages/index.html">Ecommerce Dashboard</a>
+                                    </nav>
+                                </div>
+                                <div class="drawer-menu-heading mt-3">Pages</div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseAuthPages" aria-expanded="false"
+                                    aria-controls="collapseAuthPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                                    </svg>
+                                    Authentication
+                                </a>
+                                <div id="collapseAuthPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseAuthPages" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/auth/login.html">Sign in</a>
+                                        <a class="nav-link" href="/pages/auth/register.html">Sign up</a>
+                                        <a class="nav-link" href="/pages/auth/reset-password.html">Reset Password</a>
+                                        <a class="nav-link" href="/pages/auth/email-verification.html">Email
+                                            Verification</a>
+                                    </nav>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseAccountPages"
+                                    aria-expanded="false" aria-controls="collapseAccountPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-user">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    Account
+                                </a>
+                                <div id="collapseAccountPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseAccountPages" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/account/overview.html">Overview</a>
+                                        <a class="nav-link" href="/pages/account/followers.html">Followers</a>
+                                        <a class="nav-link" href="/pages/account/activity.html">Activity</a>
+                                        <a class="nav-link" href="/pages/account/logs.html">Logs</a>
+                                    </nav>
+                                </div>
+                                <div class="drawer-menu-heading mt-3">Apps</div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseUserManagementPages"
+                                    aria-expanded="false" aria-controls="collapseUserManagementPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-users">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    User management
+                                </a>
+                                <div id="collapseUserManagementPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseUserManagementPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="eUserManagementDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/user/overview.html">Overview</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseProjectsPages"
+                                    aria-expanded="false" aria-controls="collapseProjectsPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                    </svg>
+                                    Projects
+                                </a>
+                                <div id="collapseProjectsPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseProjectsPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="projectsDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/projects/list.html">All projects</a>
+                                            <a class="nav-link" href="/pages/projects/tasks.html">Tasks</a>
+                                            <a class="nav-link" href="/pages/projects/activity.html">Activity</a>
+                                            <a class="nav-link" href="/pages/projects/files.html">Files</a>
+                                            <a class="nav-link" href="/pages/projects/members.html">Members</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed active" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseCommercePages"
+                                    aria-expanded="false" aria-controls="collapseCommercePages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                    eCommerce
+                                </a>
+                                <div id="collapseCommercePages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseCommercePages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="eCommerceDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link accordion-button collapsed active" href="#" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseCommerceProductPages"
+                                                aria-expanded="false"
+                                                aria-controls="collapseCommerceProductPages">Products</a>
+                                            <div id="collapseCommerceProductPages" class="accordion-collapse collapse"
+                                                aria-labelledby="collapseCommerceProductPages"
+                                                data-bs-parent="#eCommerceDrawerAccordion">
+                                                <nav class="drawer-menu-nested nav">
+                                                    <a class="nav-link active"
+                                                        href="/pages/ecommerce/product/list.html">Product list</a>
+                                                    <a class="nav-link" href="/pages/ecommerce/product/create.html">Add
+                                                        Product</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/product/catalog.html">Catalog</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/product/overview.html">Overview</a>
+                                                    <a class="nav-link" href="/pages/ecommerce/product/edit.html">Edit
+                                                        Product</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link" href="/pages/ecommerce/order/list.html">Orders</a>
+                                            <a class="nav-link" href="/pages/auth/customers.html">Customers</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseInboxesPages"
+                                    aria-expanded="false" aria-controls="collapseInboxesPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                                    </svg>
+                                    Email
+                                </a>
+                                <div id="collapseInboxesPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseInboxesPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/email/inbox.html">Inbox</a>
+                                            <a class="nav-link" href="/pages/email/message.html">Message</a>
+                                            <a class="nav-link" href="/pages/email/compose.html">Compose</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFilesPages" aria-expanded="false"
+                                    aria-controls="collapseFilesPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z" />
+                                    </svg>
+                                    File manager
+                                </a>
+                                <div id="collapseFilesPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseFilesPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/file_management/list.html">File lists</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseInvoicesPages"
+                                    aria-expanded="false" aria-controls="collapseInvoicesPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg>
+                                    Invoice manager
+                                </a>
+                                <div id="collapseInvoicesPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseInvoicesPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/invoice_management/list.html">Invoices</a>
+                                            <a class="nav-link"
+                                                href="/pages/invoice_management/invoice.html">Details</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="/pages/contacts/list.html" class="nav-link" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="currentColor"
+                                        viewBox="0 0 448 512">
+                                        <path
+                                            d="M436 160c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20zm-68 304H48V48h320v416zM208 256c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6-10.8 0-18.7 8-44.8 8-26.9 0-33.4-8-44.8-8-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z">
+                                        </path>
+                                    </svg>
+                                    Contacts
+                                </a>
+                                <a href="/pages/calendar.html" class="nav-link active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    Calendar
+                                </a>
+                                <div class="drawer-menu-heading mt-3">UI Toolkit</div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseComponents" aria-expanded="false"
+                                    aria-controls="collapseComponents">
+                                    <svg class="nav-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                    </svg>
+                                    Components
+                                </a>
+                                <div id="collapseComponents" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseComponents" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/components/actions.html">Actions</a>
+                                    </nav>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseIconPages" aria-expanded="false"
+                                    aria-controls="collapseIconPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                    </svg>
+                                    Icons
+                                </a>
+                                <div id="collapseIconPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseIconPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="iconsDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link accordion-button collapsed" href="#" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseIconFontawesomePages"
+                                                aria-expanded="false" aria-controls="collapseIconFontawesomePages">Font
+                                                Awesome
+                                                5</a>
+                                            <div id="collapseIconFontawesomePages" class="accordion-collapse collapse"
+                                                aria-labelledby="collapseIconFontawesomePages"
+                                                data-bs-parent="#iconsDrawerAccordion">
+                                                <nav class="drawer-menu-nested nav">
+                                                    <a class="nav-link"
+                                                        href="/pages/icons/fontawesome-regular.html">Regular</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/icons/fontawesome-solid.html">Solid</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/icons/fontawesome-brand.html">Brands</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link" href="/pages/icons/feather.html">Feather</a>
+                                            <a class="nav-link" href="/pages/icons/octicon.html">Octicons</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drawer-footer"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <!--begin::Footer-->
+            <div class="sidebar-footer flex-column-auto" id="sidebar_footer">
+                <div class="sidebar-title mb-2 px-4">Profile</div>
+                <div class="d-flex px-4">
+                    <img class="user-image me-3" src="/img/avatar/user-1.jpg" alt="Profile">
+                    <div class="flex-row-fluid flex-wrap flex-grow-1">
+                        <div class="d-flex flex-column justify-content-center">
+                            <h3 class="text-white text-decoration-none fs-11 mb-0 fw-normal">John Doe</h3>
+                            <span class="text-muted fs-12">Manager</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button type="button"
+                            class="dropdown-toggle dropdown-no-caret dropdown-toggle-split btn bt-sm px-1 py-1 text-muted text-muted-hover"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu w-60r">
+                            <li>
+                                <div class="d-flex">
+                                    <img class="user-image me-3" src="/img/avatar/user-1.jpg" alt="Profile">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <h3 class="text-dark text-decoration-none fs-10 mb-0 fw-bold line-clamp-1">John
+                                            Doe</h3>
+                                        <span class="text-muted fs-12 line-clamp-1">Manager</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/profile.html">My
+                                    Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/profile.html">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/profile.html">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end::Footer-->
+        </aside>
+        <div class="content-wrapper">
+            <header class="navbar-head" id="header">
+                <div class="navbar-brand">
+                    <a href="/pages/index.html" class="d-flex align-items-center text-decoration-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-danger me-2" width="26" height="26"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z" />
+                            <path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z" />
+                        </svg>
+                        <h4 class="text-white mb-0">Kopy</h4>
+                    </a>
+
+                    <button type="button" class="toggle-menu" data-toggle-menu="lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="minimize-opt minimize-active" width="22"
+                            height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            class="minimize-opt minimize-hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="navbar-toolbar">
+                    <div
+                        class="container-fluid container-fluid py-6 py-lg-0 d-flex align-items-lg-stretch justify-content-lg-between">
+                        <button type="button" class="btn px-1 toggle-menu-mobile" data-toggle-menu="mini">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="d-flex justify-content-center flex-column">
+                            <h1 class="d-flex flex-column fw-bold fs-9 mb-0">
+                                Message
+                            </h1>
+                            <ul class="breadcrumb fw-normal">
+                                <li class="breadcrumb-item">
+                                    <a href="/pages/index.html" class="text-decoration-none">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="/pages/email/inbox.html" class="text-decoration-none">Messages</a>
+                                </li>
+                                <li class="breadcrumb-item text-dark">Message</li>
+                            </ul>
+                        </div>
+
+                        <ul class="nav navbar-top-links navbar-right align-items-center">
+                            <li>
+                                <button class="btn navbar-btn" data-bs-toggle="modal"
+                                    data-bs-target="#quickSearchModal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="navbar-item-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <button type="button" class="dropdown-toggle dropdown-no-caret navbar-btn"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg class="navbar-item-icon" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                                        </svg>
+                                        <span
+                                            class="position-absolute top-20 start-80 translate-middle p-1 bg-danger border border-2 border-white rounded-circle">
+                                            <span class="visually-hidden">New alerts</span>
+                                        </span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end p-0 dropdown-notifications w-96r"
+                                        id="messages">
+                                        <div class="d-flex align-items-center justify-content-between pt-3 px-4 pb-2">
+                                            <h3 class="fs-8 text-dark mb-0">Messages</h3>
+                                            <a href="#" class="text-dark fs-11 fw-bold text-decoration-none">Mark
+                                                all as
+                                                read</a>
+                                        </div>
+                                        <div class="my-1 overflow-auto hover-scroll-overlay-y">
+                                            <div class="notification-header-divider"></div>
+                                            <ul class="notification-list px-3">
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3 position-relative w-11r h-11r">
+                                                            <img src="/img/avatar/user-2.jpg" alt="User"
+                                                                class="rounded-circle w-11r h-100">
+                                                            <span
+                                                                class="position-absolute top-90 start-80 translate-middle p-1 bg-success border border-2 border-white rounded-circle">
+                                                                <span class="visually-hidden">New alerts</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    James Stone
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">1 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Lorem ipsum dolor sit amet consectetur adipisicing.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3 position-relative w-11r h-11r">
+                                                            <img src="/img/avatar/user-3.jpg" alt="User"
+                                                                class="rounded-circle w-11r h-100">
+                                                            <span
+                                                                class="position-absolute top-90 start-80 translate-middle p-1 bg-success border border-2 border-white rounded-circle">
+                                                                <span class="visually-hidden">New alerts</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    Sara Jane
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">3 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Consectetur, blanditiis!
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3 w-11r h-11r">
+                                                            <img src="/img/avatar/user-5.jpg" alt="User"
+                                                                class="rounded-circle w-11r h-100">
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    Chris James
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">5 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Lorem ipsum dolor sit, amet consectetur adipisicing
+                                                                elit. Sequi?
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3 w-11r h-11r">
+                                                            <img src="/img/avatar/user-4.jpg" alt="User"
+                                                                class="rounded-circle w-11r h-100">
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    Justine Kim
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">10 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                elit. Possimus,
+                                                                atque. Laborum.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-grid px-3 pb-2">
+                                            <a href="#" class="btn btn-link fw-bold text-decoration-none">View all
+                                                messages</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <button type="button" class="dropdown-toggle dropdown-no-caret navbar-btn"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg class="navbar-item-icon" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                                        </svg>
+                                        <span
+                                            class="position-absolute top-6 -right-2 translate-middle p-1 bg-amber-500 border-2 border-solid border-white rounded-circle animate-pulse">
+                                            <span class="visually-hidden">New alerts</span>
+                                        </span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-notifications p-0 w-96r"
+                                        id="notifications">
+                                        <div class="d-flex align-items-center justify-content-between pt-3 px-4 pb-2">
+                                            <h3 class="fs-8 text-dark mb-0">Notifications</h3>
+                                            <a href="#" class="text-dark fs-11 fw-bold text-decoration-none">Mark
+                                                all as
+                                                read</a>
+                                        </div>
+                                        <div class="my-1 overflow-auto hover-scroll-overlay-y">
+                                            <ul class="notification-list px-3">
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3 position-relative w-11r h-11r">
+                                                            <img src="/img/avatar/user-2.jpg" alt="User"
+                                                                class="rounded-circle w-11r h-100">
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    James Stone
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">1 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Update template for Bugs header.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3 position-relative w-11r h-11r">
+                                                            <img src="/img/avatar/user-3.jpg" alt="User"
+                                                                class="rounded-circle w-11r h-100">
+                                                            <span
+                                                                class="position-absolute top-7 -right-2 translate-middle p-1 bg-emerald-500 border-2 border-solid border-white rounded-circle">
+                                                                <span class="visually-hidden">New alerts</span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    Sara Jane
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">3 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Marked the <span class="text-amber-500">Bugs
+                                                                    Checker</span> as done.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3 position-relative w-11r h-11r">
+                                                            <img src="/img/avatar/user-5.jpg" alt="User"
+                                                                class="rounded-circle w-11r h-100">
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    Chris James
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">5 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Assigned <span class="text-sky-500">John Doe</span> as
+                                                                developer for the project
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="me-3 position-relative w-11r h-11r">
+                                                            <img src="/img/avatar/user-4.jpg" alt="User"
+                                                                class="rounded-circle w-11r h-100">
+                                                        </div>
+                                                        <div class="d-flex flex-column text-dark flex-grow-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">
+                                                                    Justine Kim
+                                                                </h3>
+                                                                <span class="fs-12 text-muted">10 min ago</span>
+                                                            </div>
+                                                            <p class="fs-12 line-clamp-2 mb-0">
+                                                                Ask to call you.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-grid px-3 pb-2">
+                                            <a href="#" class="btn btn-link fw-bold text-decoration-none">View all
+                                                notifications</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <div class="container-xxl mt-5">
+                    <div class="card">
+                        <div class="grid gap-2">
+                            <div class="g-col-12 g-col-lg-4"></div>
+                            <div class="g-col-12 g-col-lg-8">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="d-flex justify-content-between align-items-center h-100 px-4">
+                <div class="d-flex fs-12">
+                    <span class="text-muted fw-500">2022 </span>
+                    &copy; KopyThemes
+                </div>
+                <div clas="d-flex">
+                    <span class="text-muted fs-12">Crafted by:</span>
+                    <span class="fs-12"> KopyThemes</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Page modals -->
+    <!-- End of page modals -->
+
+    <!-- General JS Scripts -->
+    <script src="/js/main.min.js"></script>
+
+    <!-- JS Libraies -->
+    <script src="/js/plugins.js"></script>
+    <script src="/js/scripts.js"></script>
+
+    <!-- Template JS File -->
+
+    <!-- Page Specific JS File -->
+</body>
+
+</html>

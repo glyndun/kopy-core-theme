@@ -1,0 +1,49 @@
+.verification-header {
+    display: flex;
+    background-color: #fff;
+    height: 70px;
+    padding: 0 30px;
+}
+.verification-header .verification-header-brand {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.verification-header .brand-icon {
+    color: #f43f5e;
+    height: 34px;
+    width: 34px;
+    margin-right: 3px;
+}
+.verification-header .verification-header-brand .brand-name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1f2937;
+}
+.verification-header-nav {
+    display: flex;
+    align-items: center;
+}
+.form-container {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 0.865rem;
+    padding: 30px;
+    margin: 2rem 0;
+    /* box-shadow: 0 .1rem 1rem .25rem rgba(0,0,0,.05); */
+}
+.form-code {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.865rem;
+    font-size: 22px;
+    padding: 0.6rem 1.35rem;
+    width: 55px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    box-shadow: none!important;
+    font-weight: 600;
+}
+.form-code:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px #7dd3fc!important;
+    outline: none;
+}

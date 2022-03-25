@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Compose email &mdash; Admin</title>
+    <!--begin::Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <!--end::Fonts-->
+    <!-- General CSS Files -->
+    <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="/node_modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="/css/plugins/tinymce.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Page Specific Css File -->
+</head>
+
+<body class="menu-active position-ralative">
+    <div class="pre-loader">
+        <div class="pre-loader-container">
+            <div class="pre-loader-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <aside class="side-nav" id="sidebar">
+            <div class="flex-column-fluid">
+                <div class="sidebar-scroll hover-scroll-overlay-y" id="sidebar-menu" data-sidebar-menu="true"
+                    data-scroll-dependencies="{default: '#sidebar_footer', lg: '#header, #sidebar_footer'}"
+                    style="height: 285px;">
+                    <div class="sidebar-toolbar">
+                        <div class="sidebar-search-header"></div>
+                        <div class="sidebar-search-container">
+                            <button class="btn search-btn" data-bs-toggle="modal" data-bs-target="#quickSearchModal">
+                                <svg width="24" height="24" fill="none" aria-hidden="true" class="me-2 flex-none">
+                                    <path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </circle>
+                                </svg>
+                                Quick search...
+                            </button>
+                        </div>
+                        <div class="sidebar-search-footer"></div>
+                    </div>
+
+                    <nav class="drawer accordion" id="drawerAccordion">
+                        <div class="drawer-menu">
+                            <div class="nav" id="navbar-menu">
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseDashboards" aria-expanded="false"
+                                    aria-controls="collapseDashboards">
+                                    <svg class="nav-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                                    </svg>
+                                    Dashboard
+                                </a>
+                                <div id="collapseDashboards" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#drawerAccordion">
+                                    <div class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/index.html">Dashboard 1</a>
+                                        <a class="nav-link" href="/pages/dashboard-2.html">Dashboard 2</a>
+                                        <a class="nav-link" href="/pages/dashboard-3.html">Dashboard 3</a>
+                                        <a class="nav-link" href="/pages/dashboard-4.html">Dashboard 4</a>
+                                    </div>
+                                </div>
+                                <div class="drawer-menu-heading mt-3">Pages</div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseAuthPages" aria-expanded="false"
+                                    aria-controls="collapseAuthPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                                    </svg>
+                                    Authentication
+                                </a>
+                                <div id="collapseAuthPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseAuthPages" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/auth/login.html">Sign in</a>
+                                        <a class="nav-link" href="/pages/auth/register.html">Sign up</a>
+                                        <a class="nav-link" href="/pages/auth/reset-password.html">Reset Password</a>
+                                        <a class="nav-link" href="/pages/auth/email-verification.html">Email
+                                            Verification</a>
+                                    </nav>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseAccountPages"
+                                    aria-expanded="false" aria-controls="collapseAccountPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-user">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    Account
+                                </a>
+                                <div id="collapseAccountPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseAccountPages" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/account/overview.html">Overview</a>
+                                        <a class="nav-link" href="/pages/account/followers.html">Followers</a>
+                                        <a class="nav-link" href="/pages/account/activity.html">Activity</a>
+                                        <a class="nav-link" href="/pages/account/logs.html">Logs</a>
+                                    </nav>
+                                </div>
+                                <a href="/pages/feeds.html" class="nav-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                                    </svg>
+                                    Feeds
+                                </a>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseBlogPages" aria-expanded="false"
+                                    aria-controls="collapseBlogPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                                    </svg>
+                                    Blogs
+                                </a>
+                                <div id="collapseBlogPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseBlogPages" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/blogs/listing.html">All blogs</a>
+                                        <a class="nav-link" href="/pages/blogs/show.html">Blog details</a>
+                                    </nav>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseErrorPages" aria-expanded="false"
+                                    aria-controls="collapseErrorPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    Error pages
+                                </a>
+                                <div id="collapseErrorPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseErrorPages" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/errors/404.html" target="_blank">404 page</a>
+                                        <a class="nav-link" href="/pages/errors/500.html" target="_blank">500 page</a>
+                                        <a class="nav-link" href="/pages/errors/under_maintenance.html"
+                                            target="_blank">Under maintenance</a>
+                                    </nav>
+                                </div>
+                                <a href="/pages/pricing.html" class="nav-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    Pricing
+                                </a>
+                                <div class="drawer-menu-heading mt-3">Apps</div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseUserManagementPages"
+                                    aria-expanded="false" aria-controls="collapseUserManagementPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-users">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    User management
+                                </a>
+                                <div id="collapseUserManagementPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseUserManagementPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="eUserManagementDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/user/overview.html">Overview</a>
+                                            <a class="nav-link" href="/pages/user/no_users.html">No users</a>
+                                            <a class="nav-link" href="/pages/user/roles.html">Roles</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseSubscriptionPages"
+                                    aria-expanded="false" aria-controls="collapseSubscriptionPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                    Subscriptions
+                                </a>
+                                <div id="collapseSubscriptionPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseSubscriptionPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="eUserManagementDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/subscription/listing.html">All
+                                                subscriptions</a>
+                                            <a class="nav-link" href="/pages/subscription/details.html">Subscription
+                                                details</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseProjectsPages"
+                                    aria-expanded="false" aria-controls="collapseProjectsPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                    </svg>
+                                    Projects
+                                </a>
+                                <div id="collapseProjectsPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseProjectsPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="projectsDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/projects/list.html">All projects</a>
+                                            <a class="nav-link" href="/pages/projects/tasks.html">Tasks</a>
+                                            <a class="nav-link" href="/pages/projects/activity.html">Activity</a>
+                                            <a class="nav-link" href="/pages/projects/files.html">Files</a>
+                                            <a class="nav-link" href="/pages/projects/members.html">Members</a>
+                                            <a class="nav-link" href="/pages/projects/no_projects.html">No projects</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseCommercePages"
+                                    aria-expanded="false" aria-controls="collapseCommercePages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                    eCommerce
+                                </a>
+                                <div id="collapseCommercePages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseCommercePages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="eCommerceDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link accordion-button collapsed" href="#" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseCommerceProductPages"
+                                                aria-expanded="false"
+                                                aria-controls="collapseCommerceProductPages">Products</a>
+                                            <div id="collapseCommerceProductPages" class="accordion-collapse collapse"
+                                                aria-labelledby="collapseCommerceProductPages"
+                                                data-bs-parent="#eCommerceDrawerAccordion">
+                                                <nav class="drawer-menu-nested nav">
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/product/list.html">Product
+                                                        list</a>
+                                                    <a class="nav-link" href="/pages/ecommerce/product/create.html">Add
+                                                        Product</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/product/catalog.html">Catalog</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/product/overview.html">Overview</a>
+                                                    <a class="nav-link" href="/pages/ecommerce/product/edit.html">Edit
+                                                        Product</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link" href="/pages/ecommerce/order/list.html">Orders</a>
+                                            <a class="nav-link accordion-button collapsed" href="#" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseCommerceCustomerPages" aria-expanded="false"
+                                                aria-controls="collapseCommerceCustomerPages">Customers</a>
+                                            <div id="collapseCommerceCustomerPages" class="accordion-collapse collapse"
+                                                aria-labelledby="collapseCommerceCustomerPages"
+                                                data-bs-parent="#eCommerceDrawerAccordion">
+                                                <nav class="drawer-menu-nested nav">
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/customer/listing.html">Listing</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/ecommerce/customer/show.html">Customer
+                                                        details</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link" href="/pages/ecommerce/checkout.html">Checkout</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseInboxesPages"
+                                    aria-expanded="false" aria-controls="collapseInboxesPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                                    </svg>
+                                    Email
+                                </a>
+                                <div id="collapseInboxesPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseInboxesPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/email/inbox.html">Inbox</a>
+                                            <a class="nav-link" href="/pages/email/messages.html">Messages</a>
+                                            <a class="nav-link" href="/pages/email/show.html">Show</a>
+                                            <a class="nav-link" href="/pages/email/compose.html">Compose</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFilesPages" aria-expanded="false"
+                                    aria-controls="collapseFilesPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z" />
+                                    </svg>
+                                    File manager
+                                </a>
+                                <div id="collapseFilesPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseFilesPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/file_management/list.html">File lists</a>
+                                            <a class="nav-link" href="/pages/file_management/no_files.html">No files</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseInvoicesPages"
+                                    aria-expanded="false" aria-controls="collapseInvoicesPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg>
+                                    Invoice manager
+                                </a>
+                                <div id="collapseInvoicesPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseInvoicesPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link" href="/pages/invoice_management/list.html">Invoices</a>
+                                            <a class="nav-link"
+                                                href="/pages/invoice_management/invoice.html">Details</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <a href="/pages/contacts/list.html" class="nav-link" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="currentColor"
+                                        viewBox="0 0 448 512">
+                                        <path
+                                            d="M436 160c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20zm-68 304H48V48h320v416zM208 256c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6-10.8 0-18.7 8-44.8 8-26.9 0-33.4-8-44.8-8-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z">
+                                        </path>
+                                    </svg>
+                                    Contacts
+                                </a>
+                                <a href="/pages/calendar.html" class="nav-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    Calendar
+                                </a>
+                                <div class="drawer-menu-heading mt-3">UI Toolkit</div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseComponents" aria-expanded="false"
+                                    aria-controls="collapseComponents">
+                                    <svg class="nav-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                    </svg>
+                                    Components
+                                </a>
+                                <div id="collapseComponents" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseComponents" data-bs-parent="#drawerAccordion">
+                                    <nav class="drawer-menu-nested nav">
+                                        <a class="nav-link" href="/pages/components/actions.html">Actions</a>
+                                        <a class="nav-link" href="/pages/components/form.html">Form</a>
+                                        <a class="nav-link" href="/pages/components/tables.html">Tables</a>
+                                        <a class="nav-link" href="/pages/components/datatables.html">Datatables</a>
+                                    </nav>
+                                </div>
+                                <a href="#" class="nav-link accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseIconPages" aria-expanded="false"
+                                    aria-controls="collapseIconPages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="nav-link-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                    </svg>
+                                    Icons
+                                </a>
+                                <div id="collapseIconPages" class="accordion-collapse collapse"
+                                    aria-labelledby="collapseIconPages" data-bs-parent="#drawerAccordion">
+                                    <div class="accordion" id="iconsDrawerAccordion">
+                                        <nav class="drawer-menu-nested nav">
+                                            <a class="nav-link accordion-button collapsed" href="#" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseIconFontawesomePages"
+                                                aria-expanded="false" aria-controls="collapseIconFontawesomePages">Font
+                                                Awesome
+                                                5</a>
+                                            <div id="collapseIconFontawesomePages" class="accordion-collapse collapse"
+                                                aria-labelledby="collapseIconFontawesomePages"
+                                                data-bs-parent="#iconsDrawerAccordion">
+                                                <nav class="drawer-menu-nested nav">
+                                                    <a class="nav-link"
+                                                        href="/pages/icons/fontawesome-regular.html">Regular</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/icons/fontawesome-solid.html">Solid</a>
+                                                    <a class="nav-link"
+                                                        href="/pages/icons/fontawesome-brand.html">Brands</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link" href="/pages/icons/feather.html">Feather</a>
+                                            <a class="nav-link" href="/pages/icons/octicon.html">Octicons</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drawer-footer"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <!--begin::Footer-->
+            <div class="sidebar-footer flex-column-auto" id="sidebar_footer">
+                <div class="sidebar-title mb-2 px-4">Profile</div>
+                <div class="d-flex px-4">
+                    <img class="user-image me-3" src="/img/avatar/user-1.jpg" alt="Profile">
+                    <div class="flex-row-fluid flex-wrap flex-grow-1">
+                        <div class="d-flex flex-column justify-content-center">
+                            <h3 class="text-white text-decoration-none fs-11 mb-0 fw-normal">John Doe</h3>
+                            <span class="text-muted fs-12">Manager</span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button type="button"
+                            class="dropdown-toggle dropdown-no-caret dropdown-toggle-split btn bt-sm px-1 py-1 text-muted text-muted-hover"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu w-60r">
+                            <li>
+                                <div class="d-flex px-3 py-1">
+                                    <img class="user-image me-2" src="/img/avatar/user-1.jpg" alt="Profile">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <h3 class="text-dark text-decoration-none fs-10 mb-0 fw-bold line-clamp-1">John
+                                            Doe</h3>
+                                        <span class="text-muted fs-12 line-clamp-1">Manager</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/user/profile_settings.html">My
+                                    Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/subscription/details.html">Subscriptions</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/projects/activity.html">Projects</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/pages/auth/login.html">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end::Footer-->
+        </aside>
+        <div class="content-wrapper">
+            <header class="navbar-head" id="header">
+                <div class="navbar-brand">
+                    <div class="navbar-brand-mini">
+                        <a href="/pages/index.html" class="d-flex align-items-center text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-danger me-2" width="26" height="26"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z" />
+                                <path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z" />
+                            </svg>
+                            <h4 class="text-white mb-0 fs-9">Kopy</h4>
+                        </a>
+                    </div>
+                    <div class="navbar-brand-lg">
+                        <a href="/pages/index.html" class="d-flex align-items-center text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-danger me-2" width="26" height="26"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z" />
+                                <path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z" />
+                            </svg>
+                            <h4 class="text-white mb-0">Kopy</h4>
+                        </a>
+                    </div>
+
+
+                    <button type="button" class="toggle-menu" data-toggle-menu="lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="minimize-opt minimize-active" width="22"
+                            height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            class="minimize-opt minimize-hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+
+                    <button type="button" class="btn px-1 toggle-menu-mobile ms-auto" data-toggle-menu="mini">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="navbar-toolbar">
+                    <div class="container-fluid d-flex flex-md-row flex-column justify-md-content-between py-3 py-lg-0">
+                        <div class="d-flex justify-content-center flex-column flex-grow-1">
+                            <h1 class="d-flex flex-column fw-bold fs-9 mb-0 line-clamp-1">
+                                Compose email
+                            </h1>
+                            <ul class="breadcrumb fw-normal overflow-hidden">
+                                <li class="breadcrumb-item">
+                                    <a href="/pages/index.html" class="text-decoration-none">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="/pages/email/inbox.html" class="text-decoration-none">Messages</a>
+                                </li>
+                                <li class="breadcrumb-item active">Compose email</li>
+                            </ul>
+                        </div>
+
+                        <ul
+                            class="nav navbar-top-links navbar-right align-items-center mt-2 mt-md-0 justify-content-around justify-md-content-start">
+                            <li>
+                                <button class="btn navbar-btn" data-bs-toggle="modal"
+                                    data-bs-target="#quickSearchModal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="navbar-item-icon" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn navbar-btn btn-toggle-screen">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="navbar-item-icon maximize-icon"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize">
+                                        <path
+                                            d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+                                        </path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="navbar-item-icon manimize-icon"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize">
+                                        <path
+                                            d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <button type="button" class="dropdown-toggle dropdown-no-caret navbar-btn"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg class="navbar-item-icon" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                                        </svg>
+                                        <span
+                                            class="position-absolute top-20 start-80 translate-middle p-1 bg-danger border border-2 border-white rounded-circle">
+                                            <span class="visually-hidden">New alerts</span>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-start w-96r dropdown-menu-lg-end"
+                                        id="messages">
+                                        <li>
+                                            <div
+                                                class="dropdown-header d-flex align-items-center justify-content-between pt-2 px-4 pb-2">
+                                                <h3 class="fs-8 text-dark mb-0">Messages</h3>
+                                                <a href="#" class="text-dark fs-11 fw-bold text-decoration-none">Mark
+                                                    all as
+                                                    read</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 position-relative w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-2.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                    <span
+                                                        class="position-absolute top-90 start-80 translate-middle p-1 bg-success border border-2 border-white rounded-circle">
+                                                        <span class="visually-hidden">New alerts</span>
+                                                    </span>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">James
+                                                            Stone
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">1 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 position-relative w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-3.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                    <span
+                                                        class="position-absolute top-90 start-80 translate-middle p-1 bg-success border border-2 border-white rounded-circle">
+                                                        <span class="visually-hidden">New alerts</span>
+                                                    </span>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">Sara
+                                                            Jane
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">3 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Consectetur, blanditiis!
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-5.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">Chris
+                                                            James
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">5 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi?
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-4.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">Justine
+                                                            Kim
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">10 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        Possimus,
+                                                        atque. Laborum.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item text-center py-3 fw-bold">View all
+                                                messages</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <button type="button" class="dropdown-toggle dropdown-no-caret navbar-btn"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg class="navbar-item-icon" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                                        </svg>
+                                        <span
+                                            class="position-absolute top-6 -right-2 translate-middle p-1 bg-amber-500 border-2 border-solid border-white rounded-circle animate-pulse">
+                                            <span class="visually-hidden">New alerts</span>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end w-96r">
+                                        <li>
+                                            <div
+                                                class="dropdown-header d-flex align-items-center justify-content-between pt-2 px-4 pb-2">
+                                                <h3 class="fs-8 text-dark mb-0">Notifications</h3>
+                                                <a href="#" class="text-dark fs-11 fw-bold text-decoration-none">Mark
+                                                    all as
+                                                    read</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 position-relative w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-2.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">James
+                                                            Stone
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">1 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Update template for Bugs header.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 position-relative w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-3.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                    <span
+                                                        class="position-absolute top-7 -right-2 translate-middle p-1 bg-emerald-500 border-2 border-solid border-white rounded-circle">
+                                                        <span class="visually-hidden">New alerts</span>
+                                                    </span>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">Sara
+                                                            Jane
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">3 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Marked the <span class="text-amber-500">Bugs Checker</span> as
+                                                        done.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 position-relative w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-5.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">Chris
+                                                            James
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">5 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 mb-0">
+                                                        Assigned John Doe as
+                                                        developer for the project
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item px-4 py-3" href="#">
+                                                <div class="me-3 position-relative w-11r h-11r float-start">
+                                                    <img src="/img/avatar/user-4.jpg" alt="User"
+                                                        class="rounded-circle w-11r h-100">
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h3 class="fs-11 fw-bold mb-0 line-clamp-1 flex-grow-1">Justine
+                                                            Kim
+                                                        </h3>
+                                                        <span class="fs-12 text-muted">10 min ago</span>
+                                                    </div>
+                                                    <p class="fs-12 line-clamp-2 mb-0">
+                                                        Ask to call you.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item text-center py-3 fw-bold">View all
+                                                notifications</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <div class="container-xxl mt-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="grid gap-5">
+                                <div class="g-col-12 g-col-lg-4">
+                                    <ul class="nav nav-outline-primary flex-lg-column mb-2" id="myTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active px-lg-5 py-lg-4 text-start position-relative"
+                                                id="all-inbox-tab" data-bs-toggle="tab" data-bs-target="#all-inbox"
+                                                type="button" role="tab" aria-controls="all-inbox" aria-selected="true">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="me-lg-3" width="22"
+                                                        height="22" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-inbox">
+                                                        <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+                                                        <path
+                                                            d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z">
+                                                        </path>
+                                                    </svg>
+                                                    <div class="d-lg-flex flex-column flex-grow-1 d-none">
+                                                        <h5 class="mb-0 nav-title">All inbox</h5>
+                                                        <p class="mb-0 nav-desc">All messages received</p>
+                                                    </div>
+                                                    <span
+                                                        class="position-absolute top-0 end-10 top-lg-40 badge bg-light-primary rounded-pill text-primary">8</span>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link px-lg-5 py-lg-4 text-start" id="starred-tab"
+                                                data-bs-toggle="tab" data-bs-target="#starred" type="button" role="tab"
+                                                aria-controls="starred" aria-selected="false">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="me-lg-3" width="22"
+                                                        height="22" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-star">
+                                                        <polygon
+                                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                                        </polygon>
+                                                    </svg>
+                                                    <div class="d-lg-flex flex-column d-none">
+                                                        <h5 class="nav-title mb-0">Starred</h5>
+                                                        <p class="mb-0 nav-desc">Selected messages</p>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link px-lg-5 py-lg-4 text-start" id="snoozed-tab"
+                                                data-bs-toggle="tab" data-bs-target="#snoozed" type="button" role="tab"
+                                                aria-controls="snoozed" aria-selected="false">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="me-lg-3" width="22"
+                                                        height="22" fill="none" viewBox="0 0 24 24"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                                                    </svg>
+                                                    <div class="d-lg-flex flex-column d-none">
+                                                        <h5 class="nav-title mb-0">Snoozed</h5>
+                                                        <p class="mb-0 nav-desc">Will appear later</p>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link px-lg-5 py-lg-4 text-start" id="drafts-tab"
+                                                data-bs-toggle="tab" data-bs-target="#drafts" type="button" role="tab"
+                                                aria-controls="drafts" aria-selected="false">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="me-lg-3" width="22"
+                                                        height="22" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-book">
+                                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                                        <path
+                                                            d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z">
+                                                        </path>
+                                                    </svg>
+                                                    <div class="d-lg-flex flex-column d-none">
+                                                        <h5 class="nav-title mb-0">Drafts</h5>
+                                                        <p class="mb-0 nav-desc">Re-edit your messages</p>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link px-lg-5 py-lg-4 text-start" id="deleted-tab"
+                                                data-bs-toggle="tab" data-bs-target="#deleted" type="button" role="tab"
+                                                aria-controls="deleted" aria-selected="false">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="me-lg-3" width="22"
+                                                        height="22" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-trash-2">
+                                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                                        <path
+                                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                        </path>
+                                                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                                                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                                                    </svg>
+                                                    <div class="d-lg-flex flex-column d-none">
+                                                        <h5 class="nav-title mb-0">Deleted</h5>
+                                                        <p class="nav-desc mb-0">Removed messages</p>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                    </ul>
+
+                                    <div class="d-flex flex-grow-1 flex-row flex-lg-column mt-lg-5 mb-lg-0">
+                                        <ul class="nav nav-outline-primary flex-lg-column" id="myTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button
+                                                    class="nav-link active px-lg-5 py-lg-4 text-start position-relative"
+                                                    id="tag-personsal-conversation-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#tag-personsal-conversation" type="button"
+                                                    role="tab" aria-controls="tag-personsal-conversation"
+                                                    aria-selected="true">
+                                                    <div class="d-flex align-items-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="me-lg-3"
+                                                            width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="feather feather-tag">
+                                                            <path
+                                                                d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z">
+                                                            </path>
+                                                            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                                                        </svg>
+                                                        <div class="d-lg-flex d-none flex-column flex-grow-1">
+                                                            <h5 class="nav-title mb-0">Personsal Conversations</h5>
+                                                            <p class="nav-desc mb-0">Messages mark as personsal</p>
+                                                        </div>
+                                                        <span
+                                                            class="position-absolute top-0 end-10 top-lg-40 badge bg-light-primary rounded-pill text-primary">8</span>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link px-lg-5 py-lg-4 text-start"
+                                                    id="tag-bussiness-conversation-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#tag-bussiness-conversation" type="button"
+                                                    role="tab" aria-controls="tag-bussiness-conversation"
+                                                    aria-selected="false">
+                                                    <div class="d-flex align-items-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="me-lg-3"
+                                                            width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="feather feather-tag">
+                                                            <path
+                                                                d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z">
+                                                            </path>
+                                                            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                                                        </svg>
+                                                        <div class="d-lg-flex d-none flex-column">
+                                                            <h5 class="fs-11 mb-0">Business Conversations</h5>
+                                                            <p class="text-muted fs-12 mb-0 fw-normal">Messages marked
+                                                                as business</p>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                        </ul>
+
+                                        <div class="mt-lg-5 d-lg-grid ms-auto ms-lg-0">
+                                            <button type="button" class="btn btn-outline py-lg-3">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="me-lg-3" width="22"
+                                                        height="22" fill="none" viewBox="0 0 24 24"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                                                    </svg>
+                                                    <div class="d-lg-flex d-none flex-column align-items-start">
+                                                        <h5 class="fs-11 mb-0">Manage Labels</h5>
+                                                        <p class="text-muted fs-12 mb-0 fw-normal">Add or remove labels
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="g-col-12 g-col-lg-8">
+                                    <div class="mb-4">
+                                        <label for="tax_method" class="mb-1">To</label>
+                                        <select name="tax_method" class="form-control select2" name="recipients[]"
+                                            multiple="multiple">
+                                            <option value="Esta Raynor">Esta Raynor</option>
+                                            <option value="Gaylord Jacobson">Gaylord Jacobson</option>
+                                            <option value="Ms. Lavonne Bayer">Ms. Lavonne Bayer</option>
+                                            <option value="Melyna Schoen">Melyna Schoen</option>
+                                            <option value="Ena Connelly">Ena Connelly</option>
+                                            <option value="Wendell Collier">Wendell Collier</option>
+                                            <option value="Magnus Champlin">Magnus Champlin</option>
+                                            <option value="Mr. Riley Kozey">Mr. Riley Kozey</option>
+                                            <option value="Dr. Rosamond Becker DVM">Dr. Rosamond Becker DVM</option>
+                                            <option value="Izaiah White">Izaiah White</option>
+                                            <option value="Mrs. Brionna Swaniawski DDS">Mrs. Brionna Swaniawski DDS
+                                            </option>
+                                            <option value="Lisandro Mills">Lisandro Mills</option>
+                                            <option value="Daron Hilpert II">Daron Hilpert II</option>
+                                            <option value="Wava Schimmel Sr.">Wava Schimmel Sr.</option>
+                                            <option value="Gladys White">Gladys White</option>
+                                            <option value="Jess Raynor">Jess Raynor</option>
+                                            <option value="Hallie Waters">Hallie Waters</option>
+                                            <option value="Ubaldo Block">Ubaldo Block</option>
+                                            <option value="Marley Pfannerstill">Marley Pfannerstill</option>
+                                            <option value="Sedrick Block">Sedrick Block</option>
+                                            <option value="Winona Kunde">Winona Kunde</option>
+                                            <option value="Brennon Rowe">Brennon Rowe</option>
+                                            <option value="Dustin Schimmel">Dustin Schimmel</option>
+                                            <option value="Jewell Schamberger">Jewell Schamberger</option>
+                                            <option value="Prof. Daren Walter">Prof. Daren Walter</option>
+                                            <option value="Prof. Reinhold Bahringer">Prof. Reinhold Bahringer</option>
+                                            <option value="Anthony McCullough">Anthony McCullough</option>
+                                            <option value="Dr. Verlie Monahan II">Dr. Verlie Monahan II</option>
+                                            <option value="Dr. Bart Parker I">Dr. Bart Parker I</option>
+                                            <option value="Karina Orn IV">Karina Orn IV</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="subject">Subject</label>
+                                        <input type="text" name="subject" class="form-control mt-1" required />
+                                    </div>
+                                    <div>
+                                        <textarea id="message" name="message" style="height: 400px;"></textarea>
+                                    </div>
+                                    <div class="mt-4">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <div class="btn-group dropup">
+                                                    <button type="button" class="btn btn-primary">
+                                                        Send
+                                                    </button>
+                                                    <button type="button"
+                                                        class="btn btn-primary dropdown-toggle dropdown-toggle-split px-2"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path fill-rule="evenodd"
+                                                                d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Schedule send</a></li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="btn btn-sm px-2 ms-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                        viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </button>
+                                                <button type="button" class="btn btn-sm px-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                        viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="ms-auto d-flex align-items-center">
+                                                <button type="button" class="btn btn-sm px-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                        viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd"
+                                                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown">
+                                                    <button type="button" class="dropdown-toggle btn btn-sm px-2"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                            viewBox="0 0 20 20" fill="currentColor">
+                                                            <path
+                                                                d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                                                        </svg>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-end">
+                                                        <li><a class="dropdown-item" href="#">View</a></li>
+                                                        <li><a class="dropdown-item" href="#">Edit</a>
+                                                        </li>
+                                                        <li><a class="dropdown-item text-rose-600" href="#">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="d-flex justify-content-between align-items-center h-100 px-4">
+                <div class="d-flex fs-12">
+                    <span class="text-muted fw-500">2022 </span>
+                    &copy; KopyThemes
+                </div>
+                <div clas="d-flex">
+                    <span class="text-muted fs-12">Crafted by:</span>
+                    <span class="fs-12"> KopyThemes</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Page modals -->
+    <!-- Quick search modal -->
+    <div class="modal fade" id="quickSearchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <header class="quick-search-header">
+                    <form class="quick-search-form" id="quick-search-form">
+                        <label for="docsearch-input" class="quick-search-input-label">
+                            <svg width="24" height="24" fill="none" aria-hidden="true"
+                                class="quick-search-icon flex-none">
+                                <path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                </path>
+                                <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                </circle>
+                            </svg>
+                            <div class="quick-search-spinner spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </label>
+                        <input class="quick-search-input" aria-autocomplete="list" aria-labelledby="docsearch-label"
+                            id="docsearch-input" autocomplete="off" autocorrect="off" autocapitalize="off"
+                            spellcheck="false" placeholder="Search documentation" maxlength="64" type="search">
+                    </form>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </header>
+                <div class="modal-body px-0">
+                    <div class="" id="recent-searchs">
+                        <div class="px-5">
+                            <h6 class="fs-9">Recent</h6>
+                        </div>
+                        <ul class="list-group list-group-flush mt-3">
+                            <li class="list-group-item list-group-item-action border-top border-bottom ps-5">
+                                <div class="d-flex align-items-center w-100">
+                                    <a href="#" class="text-decoration-none text-dark text-opacity-75">Card</a>
+                                    <a href="#" class="btn btn-sm ms-auto px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-bottom ps-5">
+                                <div class="d-flex align-items-center w-100">
+                                    <a href="#" class="text-decoration-none text-dark text-opacity-75">User
+                                        management</a>
+                                    <a href="#" class="btn btn-sm ms-auto px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-bottom ps-5">
+                                <div class="d-flex align-items-center w-100">
+                                    <a href="#" class="text-decoration-none text-dark text-opacity-75">Button</a>
+                                    <a href="#" class="btn btn-sm ms-auto px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-none" id="quick-search-no-result">
+                        <div class="h-32r d-flex align-items-center justify-content-center">
+                            <span class="fs-10 text-muted">No results for "</span>
+                            <span class="fs-10 quick-search-no-result-label"></span>
+                            <span class="fs-10 text-muted">"</span>
+                        </div>
+                    </div>
+                    <div class="d-none" id="quick-search-result">
+                        <div class="px-5">
+                            <h6 class="mb-3 fs-10">Results</h6>
+                            <div class="list-group list-group-separate list-group-light-primary"
+                                id="quick-search-result-list">
+                                <a href="#" class="list-group-item list-group-item-action py-3 px-4" role="presentation"
+                                    id="all-inbox-tab" data-bs-toggle="tab" data-bs-target="#all-inbox" type="button"
+                                    aria-controls="all-inbox" aria-selected="false">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex flex-column align-items-start">
+                                            <h6 class="mb-2">Account mangement</h6>
+                                            <div class="d-flex gx-2">
+                                                <span class="badge bg-light-primary py-1 px-2">App</span>
+                                            </div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of page modals -->
+
+    <!-- General JS Scripts -->
+    <script src="/js/main.min.js"></script>
+
+    <!-- JS Libraies -->
+    <script src="/node_modules/select2/dist/js/select2.full.min.js"></script>
+    <script src="/node_modules/tinymce/tinymce.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/scripts.js"></script>
+
+    <!-- Template JS File -->
+
+    <!-- Page Specific JS File -->
+    <script src="/js/page/quick_search.js"></script>
+    <script src="/js/page/compose_email.js"></script>
+</body>
+
+</html>
